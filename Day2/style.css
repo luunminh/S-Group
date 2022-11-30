@@ -18,6 +18,9 @@ html {
     background-color: #FFF;
 }
 
+
+/* Header */
+
 .header {
     height: 50px;
     background-color: #FFF;
@@ -68,6 +71,10 @@ html {
 .header__social-media-icon {
     border-radius: 50px;
 }
+
+
+
+/* profile info */
 
 .profile-info {
     padding-top: 100px;
@@ -133,7 +140,7 @@ html {
     border-bottom: 4px solid #f26261;
     letter-spacing: 2px;
     height: 26px;
-    width: 100px;
+    width: 110px;
 }
 
 .profile-about-desc {
@@ -182,7 +189,8 @@ html {
     margin-top: 36px;
     cursor: pointer;
 }
-.profile-footer-btn:hover{
+
+.profile-footer-btn:hover {
     background-color: #f26261;
     color: #FFF;
 }
