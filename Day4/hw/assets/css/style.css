@@ -1,0 +1,265 @@
+body,
+html,
+h2,
+div {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+* {
+    --item2-color: #4a3753;
+}
+
+.main {
+    background-color: black;
+    width: 100%;
+    height: 1696px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item {
+    width: 480px;
+    height: 360px;
+    background-image: url("/SG/Day4/hw/assets/img/12.jpg");
+    background-size: 480px;
+    position: relative;
+    overflow: hidden;
+    z-index: 4;
+    transition-property: all;
+    transition-duration: .4s;
+
+}
+
+.item:hover>.container>.anh {
+    transform: translateX(-35px);
+}
+
+.anh {
+    z-index: 1;
+    /* transform: scale(110%); */
+    transition-property: all;
+    transition-duration: .35s;
+    width: 550px;
+
+}
+
+.item:hover>.container>.container-item {
+    background-color: rgba(48, 133, 163, 0);
+}
+
+
+.item:hover>.container>.container-item>.text-content>p {
+    opacity: 96%;
+}
+
+.item:hover>.container>div {
+    transform: translate(-10px, -35px);
+}
+
+
+
+
+
+
+.container,
+.eff2 {
+    width: 600px;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    transition-property: all;
+    transition-duration: .2s;
+
+}
+
+.container-item {
+    width: 480px;
+    height: 360px;
+    background-color: rgba(48, 133, 163, 0.369);
+    position: absolute;
+    top: 0;
+}
+
+.container>div {
+    transition-property: all;
+    transition-duration: .36s;
+}
+
+p {
+    transition-property: all;
+    transition-duration: .36s;
+}
+
+
+img {
+    width: 480px;
+    /* height: 360px; */
+    z-index: 1;
+}
+
+.text-content,
+.text-content-2,
+.text-content-3 {
+    text-transform: uppercase;
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 40px;
+    width: 100%;
+    height: 20%;
+    letter-spacing: 1.3px;
+}
+
+h2,
+span {
+    font-size: 28px;
+    display: inline;
+}
+
+.text-content>h2 {
+    font-weight: 100;
+}
+
+.text-content>h2>span {
+    font-weight: 700;
+}
+
+.text-content-2>h2,
+.text-content-3>h2 {
+    font-weight: 100;
+}
+
+.text-content-2>h2>span,
+.text-content-3>h2>span {
+    font-weight: 700;
+}
+
+
+.text-content>p,
+.text-content2>p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 5px 0 0 0;
+    opacity: 0;
+
+}
+
+
+/* item 2 */
+.hide {
+    display: inline;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: .2s;
+}
+
+.text-content-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1em 1.5em;
+    width: 100%;
+    text-align: left;
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+    color: #FFF;
+    transition-property: all;
+    transition-duration: .4s;
+}
+
+.container-item-2 {
+    width: 480px;
+    height: 360px;
+    background-color: rgba(74, 55, 83, 0);
+    position: absolute;
+    top: 0;
+    transition-property: all;
+    transition-duration: .36s;
+    border-bottom: 10px solid #FFF;
+
+
+}
+
+.item:hover .hide {
+    opacity: 100;
+}
+
+.item:hover .text-content-2 {
+    transform: translateY(30px);
+}
+
+.item:hover .container-item-2 {
+    background-color: rgba(74, 55, 83, 0.4);
+    transform: translateY(-10px);
+}
+
+/* item 3 */
+.text-content-3>div>p {
+    color: black;
+    font-size: 10px;
+    background-color: #FFF;
+    padding: 5px 8px;
+    width: 250px;
+    text-align: center;
+    transition-duration: .3s;
+    opacity: 0;
+}
+
+.container-item-3 {
+    width: 480px;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    transition-property: all;
+}
+
+.text-content-3 {
+    position: absolute;
+    top: 0;
+
+}
+
+.text-content-3>div {
+    position: absolute;
+}
+
+.item:hover .text-content-3>div>p {
+    transform: translateX(0px);
+    transition-property: all;
+    opacity: 1;
+}
+
+.item:hover>.eff3>.anh {
+    transform: scale(1.1);
+}
+
+.item:hover>.eff3>.container-item-3 {
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+
+
+.p-1 {
+    transform: translateX(-400px);
+    transition-delay: 0s;
+}
+
+.p-2 {
+    transform: translateX(-370px);
+    transition-delay: .15s;
+
+}
+
+.p-3 {
+    transform: translateX(-340px);
+    transition-delay: .3s;
+
+}

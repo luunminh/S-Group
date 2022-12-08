@@ -1,0 +1,166 @@
+.container {
+    display: flex;
+}
+
+.trigger {
+    color: #000;
+    height: 30px;
+    background-color: coral;
+    margin: 10px;
+}
+
+.translate {
+    color: #FFF;
+    background-color: #000;
+    margin: 10px;
+    transition-property: all;
+    transition-duration: 6.9s;
+
+}
+
+.trigger:hover+.translateX {
+    transform: translateX(69px);
+}
+
+.trigger:hover+.translateY {
+    transform: translateY(69px);
+}
+
+.trigger:hover+.translateXY {
+    transform: translate(69px, 69px);
+}
+
+.trigger:hover+.Translate-rotate {
+    transform: rotate(6.9rad);
+}
+
+.trigger:hover+.translate-skew {
+    transform: skew(69deg);
+}
+
+.trigger:hover+.translate-scale {
+    transform: scale(6.9);
+}
+
+.trigger:hover+.charge-effect .animation-effect {
+    animation: examples 0.69s infinite ease-in-out;
+}
+
+.charge-effect {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.charge-percent {
+    height: 100%;
+    background-color: green;
+    width: 0%;
+}
+
+.trigger:hover+.charge-effect>.charge-percent {
+    animation: charging 0.69s both ease-in-out;
+}
+
+.trigger:hover+.charge-effect>.charge-percent::before {
+    animation: charging-number 0.69s both ease-in-out;
+}
+
+.charge-percent::before {
+    content: "0%";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes charging {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes charging-number {
+    0% {
+        content: "0%";
+    }
+
+    10% {
+        content: "10%";
+
+    }
+
+    20% {
+        content: "20%";
+
+    }
+
+    30% {
+        content: "30%";
+
+    }
+
+    40% {
+        content: "40%";
+
+    }
+
+    50% {
+        content: "50%";
+
+    }
+
+    60% {
+        content: "60%";
+
+    }
+
+    70% {
+        content: "70%";
+
+    }
+
+    80% {
+        content: "80%";
+
+    }
+
+    90% {
+        content: "90%";
+
+    }
+
+    100% {
+        content: "100%";
+
+    }
+}
+
+
+
+@keyframes examples {
+    0% {
+        transform: translate(0px);
+    }
+
+    25% {
+        transform: translate(69px, 0);
+    }
+
+    50% {
+        transform: translate(69px, 69px);
+    }
+
+    75% {
+        transform: translate(0px, 69px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+
+}
