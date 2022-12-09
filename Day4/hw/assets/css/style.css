@@ -205,7 +205,7 @@ span {
     font-size: 10px;
     background-color: #FFF;
     padding: 5px 8px;
-    width: 250px;
+    /* width: 250px; */
     text-align: center;
     transition-duration: .3s;
     opacity: 0;
@@ -250,16 +250,20 @@ span {
 .p-1 {
     transform: translateX(-400px);
     transition-delay: 0s;
+    /* transition-timing-function: ease-in; */
 }
 
 .p-2 {
     transform: translateX(-370px);
-    transition-delay: .15s;
+    transition-delay: .05s;
+    /* transition-timing-function: ease-in-out; */
+
 
 }
 
 .p-3 {
     transform: translateX(-340px);
-    transition-delay: .3s;
+    transition-delay: .1s;
+    /* transition-timing-function: ease-out; */
 
 }
