@@ -797,7 +797,78 @@ html {
     letter-spacing: .007rem;
 }
 
+/* app content */
+.content-app {
+    overflow: hidden;
+    border-radius: 30px;
+    background-image: radial-gradient(at 100% 100%, rgba(111, 88, 116, 0.7) 0px, transparent 50%), radial-gradient(at 90% 0%, #0a2961 0px, transparent 50%), radial-gradient(at 18% 16%, rgba(58, 3, 130, 0.79) 0px, transparent 50%), radial-gradient(at 100% 40%, rgba(76, 21, 147, 0.22) 0px, transparent 50%), radial-gradient(at 0% 100%, #74517b 0px, transparent 50%);
+}
 
+.content-app__container {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/app-mac.png");
+    z-index: 10;
+    background-repeat: no-repeat;
+}
+
+.content-app__header {
+    padding: var(--title-padding);
+    padding-bottom: 0;
+    color: #FFF;
+    font-size: 21px;
+    margin-bottom: 9px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.content-app__info__left-side {
+    display: flex;
+    align-items: flex-end;
+    height: 64%;
+    justify-content: center;
+}
+
+.content-app__info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.content-app__info__right-side {
+    padding: 0 40px;
+    margin-bottom: 140px;
+}
+
+.content-app__info__right-side__title {
+    font-size: 56px;
+    line-height: 1.07143;
+    font-weight: 700;
+    letter-spacing: -.028em;
+    color: #FFF;
+    /* max-width: 420px; */
+}
+
+.content-app__info__right-side__desc {
+    color: #FFF;
+    font-weight: 500;
+    font-size: 19px;
+    margin: 26px 26px 0 0;
+    line-height: 30px;
+}
+
+.content-app__footer > p {
+    color: #FFF;
+    font-weight: 300;
+    z-index: 10;
+    position: absolute;
+    padding: 10px;
+}
+
+.content-app__footer{
+
+}
 
 @keyframes sharpe {
     from {
