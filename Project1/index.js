@@ -13,6 +13,22 @@ const playvid = () => {
   };
 };
 
+// function replay vid performance
+const playingVid = function () {
+  const hideBtn = document.querySelector(".btn-replay");
+  hideBtn.style.opacity = "0";
+};
+const endedVid = function () {
+  const hideBtn = document.querySelector(".btn-replay");
+  hideBtn.style.opacity = "1";
+};
+
+function replayVidPerform() {
+  const element = document.querySelector(".thermal-memory-bg");
+  console.log(element);
+  element.play();
+}
+
 //play hardware vid
 const playHardWareVid = () => {
   const vidElement = document.querySelector(".thermal-memory-bg");
@@ -32,14 +48,19 @@ document.addEventListener("scroll", revealOnScroll);
 
 function revealOnScroll() {
   const elements = document.querySelectorAll(".lazy-loading-bar");
+  const batteryElement = document.querySelector(".fill-element");
   // console.log(document.querySelectorAll(".lazy-loading-bar"));
 
   for (let i = 0; i < elements.length; i++) {
     var windowHeight = window.innerHeight;
+    var batteryRevealTop = batteryElement.getBoundingClientRect().top;
     var revealTop = elements[i].getBoundingClientRect().top;
     var revealPoint = 100;
     if (revealTop < windowHeight - revealPoint) {
       elements[i].classList.add("bar-animation");
+    }
+    if (batteryRevealTop < windowHeight - revealPoint) {
+      batteryElement.classList.add("battery-fill-up");
     }
   }
 }

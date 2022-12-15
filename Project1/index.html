@@ -303,7 +303,8 @@
                                                 performance, so you can run CPU‑ and GPU‑intensive tasks for hours on
                                                 end.
                                             </p>
-                                            <div style="font-size: 14px; font-weight:300" class="btn-replay">Replay
+                                            <div style="font-size: 14px; font-weight:300" class="btn-replay"
+                                                onclick="replayVidPerform()">Replay
                                                 <iconify-icon icon="ic:baseline-replay" class="icon">
                                                 </iconify-icon>
                                             </div>
@@ -311,7 +312,8 @@
                                     </div>
                                 </div>
                                 <div class="thermal-vid ">
-                                    <video autoplay class="thermal-memory-bg" muted="muted">
+                                    <video autoplay class="thermal-memory-bg" muted="muted" onplaying="playingVid()"
+                                        onended="endedVid()">
                                         <source class="thermal-memory-bg-vid" src="./assets/img/cpu_pc.mp4"
                                             type="video/mp4">
                                     </video>
@@ -347,17 +349,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="content-tag content-app">
+                <div class="content-app content-tag">
                     <div class="row sm-gutter content-app__container">
                         <div class="content-app__header">macOS</div>
 
                         <div class="content-app__info">
                             <div class="col l-7  content-app__info__left-side">
                                 <div>
-
-                                    <div class="content-app__footer">
-                                        <p>Zoom / Microsoft Excel / Adobe InDesign</p>
+                                    <div class="content-app__info__left-side__pic-wrap">
+                                        <img src="./assets/img/app-mac.png" alt=""
+                                            class="content-app__info__left-side__pic">
+                                        <div class="content-app__footer">
+                                            <p>Zoom / Microsoft Excel / Adobe InDesign</p>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
                             <div class="col l-5">
@@ -379,11 +385,100 @@
                     </div>
                     se
                 </div>
+                <div class=" content-battery content-tag">
+                    <div class="row ">
+                        <div class="col l-4">
+                            <div class="content-battery__left-side">
+                                <div class="content-battery__left-side__header">All-day battery</div>
+                                <div class="content-battery__left-side__content">
+                                    <div class="content-battery__left-side__content__container">
+                                        <div class="content-battery__left-side__content__desc">
+                                            <p class=" fill-element">Up to 20
+                                                <br>
+                                                hours of
+                                                <br>
+                                                battery life.
+                                                <br>
+                                                Go long.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-8">
+                            <div class="content-battery__right-side">
+                                <div class="content-battery__right-side__header">
+                                    <div class="content-battery__right-side__header__item">
+                                        Media engine
+                                    </div>
+
+                                    <div class="content-battery__right-side__header__item  ">
+                                        Final cut pro
+                                    </div>
+                                </div>
+                                <div class="content-battery__right-side__content">
+                                    <div class=" l-5 content-battery__right-side__info">
+                                        <div class="content-battery__right-side__info__container">
+                                            <div class="content-battery__info__header">
+                                                A portable editing bay.
+                                            </div>
+                                            <div class="content-battery__info__desc">
+                                                <p>The high-performance media engine on M2 supports ProRes encode
+                                                    and decode. So you can play and edit up to 11 streams of 4K
+                                                    ProRes video and up to 2 streams of 8K ProRes video — including
+                                                    4K ProRes video shot on iPhone 13 Pro.12 And convert projects to
+                                                    ProRes up to 3x faster than before.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-7 content-battery__right-side__pic">
+                                        <div>
+                                            <img src="./assets/img/mac-battery.png" alt="" class="battery-render-pic">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-security content-tag">
+                    <div class="row">
+                        <div class="col l-8">
+                            <div class="content-security__left-side">
+                                <div class="content-security__left-side__header .content-tag-header">
+                                    Security
+                                </div>
+                                <div class="content-security__left-side__title">
+                                    
+                                </div>
+                                <div class="content-security__left-side__text-content">
+                                    <p>The M2 chip and macOS give MacBook Pro security and privacy features beyond
+                                        anything in its class. With built‑in protections against malware and viruses,
+                                        the freedom to choose what you share and how you share it, and silicon‑level
+                                        features like Touch ID and Apple Pay, it’s built to safeguard your privacy and
+                                        data at every stage.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4">
+                            <div class="content-security__rigth-side">
+                                <div class="content-security__right-side__header .content-tag-header">
+                                    SSD storage
+                                </div>
+                                <div class="content-security__right-side__text-content">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script>
-        ScrollReveal().reveal('.bar,.bar-2,.bar-m1-1,.bar-m1-2', { delay: 500 });
+        ScrollReveal().reveal('.battery-fill-up', {});
     </script>
 </body>
 
