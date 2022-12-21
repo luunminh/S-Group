@@ -49,18 +49,34 @@ document.addEventListener("scroll", revealOnScroll);
 function revealOnScroll() {
   const elements = document.querySelectorAll(".lazy-loading-bar");
   const batteryElement = document.querySelector(".fill-element");
-  // console.log(document.querySelectorAll(".lazy-loading-bar"));
+  const brightScreenElement = document.querySelector(
+    ".content-display__header__pic-screen"
+  );
+  const trueToneContainterElement = document.querySelector(
+    ".content-display__badge"
+  );
+  const trueToneBgElement = document.querySelector(".content-display-bg--cold");
+  // console.log(document.querySelectorAll(".content-display-bg--cold"));
 
   for (let i = 0; i < elements.length; i++) {
     var windowHeight = window.innerHeight;
-    var batteryRevealTop = batteryElement.getBoundingClientRect().top;
     var revealTop = elements[i].getBoundingClientRect().top;
+    var batteryRevealTop = batteryElement.getBoundingClientRect().top;
+    var brightenRevealTop = brightScreenElement.getBoundingClientRect().top;
+    var trueToneRevealTop =
+      trueToneContainterElement.getBoundingClientRect().top;
     var revealPoint = 100;
     if (revealTop < windowHeight - revealPoint) {
       elements[i].classList.add("bar-animation");
     }
     if (batteryRevealTop < windowHeight - revealPoint) {
       batteryElement.classList.add("battery-fill-up");
+    }
+    if (brightenRevealTop < windowHeight - revealPoint) {
+      brightScreenElement.classList.add("brighten-effect");
+    }
+    if (trueToneRevealTop < windowHeight - revealPoint) {
+      trueToneBgElement.classList.add("true-tone-effect");
     }
   }
 }

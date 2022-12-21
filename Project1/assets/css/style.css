@@ -44,7 +44,7 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     position: relative;
     z-index: 0;
     box-sizing: border-box;
@@ -66,6 +66,8 @@
     margin-right: auto;
     flex-grow: 1;
     transform: translateZ(0);
+    z-index: 2;
+
 
 }
 
@@ -79,12 +81,22 @@
     margin-right: auto;
     flex-grow: 1;
     transform: translateZ(0);
+    z-index: 2;
+
 }
 
 .content-centered {
     justify-content: center;
 }
 
+.section-padding-top {
+    padding-top: 170px;
+}
+
+.text-para-large {
+    max-width: 70%;
+    margin-top: 22px;
+}
 
 a {
     text-decoration: none;
@@ -419,7 +431,6 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 170px;
 }
 
 .section-content__title {
@@ -910,7 +921,7 @@ html {
 
 .content-app__info__right-side {
     padding: 0 40px;
-    margin-bottom: 140px;
+    margin-bottom: 69px;
 }
 
 .content-app__info__right-side__title {
@@ -919,7 +930,7 @@ html {
     font-weight: 700;
     letter-spacing: -.028em;
     color: #FFF;
-    /* max-width: 420px; */
+    margin-right: 30px;
 }
 
 .content-app__info__right-side__desc {
@@ -1181,6 +1192,146 @@ html {
 }
 
 
+/* display session */
+
+.content-display {
+    background-color: #000;
+}
+
+.content-display__header {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+    position: relative;
+}
+
+.content-display__header__title--grey {
+    margin-top: 41px;
+    color: #A1A1A6;
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -.015em;
+}
+
+.content-display__header__title--white {
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -.015em;
+    color: #FFF;
+}
+
+.content-display__header__text-content {
+    color: #A1A1A6;
+    font-size: 28px;
+    line-height: 1.14286;
+    font-weight: 500;
+    letter-spacing: .007em;
+}
+
+
+.content-display__header__sreen-display {
+    position: relative;
+    margin: 70px 0 130px;
+}
+
+.content-display__header__pic-screen {
+    opacity: 0.2;
+    opacity: 0.2;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 927px;
+    height: 579px;
+    /* position: relative; */
+    left: 50%;
+    margin-left: -463.5px;
+    top: 43px;
+    /* animation: brighten 1.2s ease-in-out forwards; */
+}
+
+.content-display__header__pic-lap {
+    display: block;
+    width: 1215px;
+    height: 705px;
+    position: relative;
+    left: 50%;
+    margin-left: -607.5px;
+}
+
+.brighten-effect {
+    animation: brighten 3s ease-in-out forwards;
+}
+
+.content-display__header__pic-caption {
+    color: #d2d2d7;
+    position: absolute;
+    width: 400px;
+    text-align: right;
+    right: 0;
+    bottom: -30px;
+}
+
+.content-display__container__item {
+    background-color: #151516;
+}
+
+.content-display__container__item {
+    margin: 0;
+}
+
+.content-display__container__icon {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-display__badge {
+    text-align: center;
+    color: #FFF;
+}
+
+.badge__value {
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -.015em;
+    margin: 20px 0;
+}
+
+.badge__typography {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.14286;
+}
+
+.change-brighten {
+    margin-bottom: 112px;
+}
+
+.content-display-bg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.content-display-bg--cold {
+    opacity: 1;
+}
+
+.true-tone-effect {
+    animation: trueTone-fadeOut 1s ease-in-out forwards;
+}
+
+.true-tone-img {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
 @keyframes sharpe {
     from {
         opacity: 0;
@@ -1229,6 +1380,28 @@ html {
     100% {
         background-position: 100% 100%;
     }
+}
+
+@keyframes brighten {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes trueTone-fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
 }
 
 /* .app-content-container : căn chiều dọc giữa item */
