@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
-    <script src="./index.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./index.js" defer></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
 </head>
 
@@ -213,7 +214,7 @@
                                         <div class="compare-performance__container">
                                             <div class="bars-content-container">
                                                 <div class="bars-mask">
-                                                    <div class="bar lazy-loading-bar"></div>
+                                                    <div class="bar lazy-loading-bar bar-animation wow"></div>
                                                     <div class="bars-caption">
                                                         <span>MacBook Pro 13" with M2</span>
                                                     </div>
@@ -222,7 +223,7 @@
                                             </div>
                                             <div class="bars-content-container"></div>
                                             <div class="bars-mask">
-                                                <div class="bar-2 bar-m1-1 lazy-loading-bar"></div>
+                                                <div class="bar-2 bar-m1-1 lazy-loading-bar bar-animation wow"></div>
                                                 <div class="bars-caption">
                                                     <span>MacBook Pro 13" with M2</span>
                                                 </div>
@@ -262,7 +263,7 @@
                                         <div class="compare-performance__container">
                                             <div class="bars-content-container">
                                                 <div class="bars-mask">
-                                                    <div class="bar lazy-loading-bar"></div>
+                                                    <div class="bar lazy-loading-bar bar-animation wow"></div>
                                                     <div class="bars-caption">
                                                         <span>MacBook Pro 13” with M2</span>
                                                     </div>
@@ -271,7 +272,7 @@
                                             </div>
                                             <div class="bars-content-container"></div>
                                             <div class="bars-mask">
-                                                <div class="bar-2 bar-m1-2 lazy-loading-bar"></div>
+                                                <div class="bar-2 bar-m1-2 lazy-loading-bar bar-animation wow"></div>
                                                 <div class="bars-caption">
                                                     <span>MacBook Pro 13” with quad‑core Intel Core i7</span>
                                                 </div>
@@ -391,7 +392,7 @@
                                 <div class="content-tag-text-field-container content-centered">
                                     <div class="content-battery__left-side__content__container">
                                         <div class="content-battery__left-side__content__desc">
-                                            <p class=" fill-element">Up to 20
+                                            <p class=" fill-element battery-fill-up wow">Up to 20
                                                 <br>
                                                 hours of
                                                 <br>
@@ -518,7 +519,7 @@
                             </p>
                             <div class="content-section__header__screen-container">
                                 <img src="./assets/img/retina_hero_screen__gddr9b8m4kuq_large.jpg" alt=""
-                                    class="content-display__header__pic-screen">
+                                    class="content-display__header__pic-screen brighten-effect wow">
                                 <img src="./assets/img/retina_hero_hardware__bw8sfea616j6_large.jpg" alt=""
                                     class="content-display__header__pic-lap">
                             </div>
@@ -572,11 +573,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="content-display-bg">
+                                    <div class="content-display-bg content-display-bg--warm">
                                         <img src="./assets/img/truetone_warm_bg__gjhxib60wtua_large.jpg" alt=""
                                             class="true-tone-img">
                                     </div>
-                                    <div class="content-display-bg--cold">
+                                    <div class="content-display-bg--cold true-tone-effect wow">
                                         <img src="./assets/img/truetone_cold_bg__chsf1efvkyuu_large.jpg" alt=""
                                             class="true-tone-img">
                                     </div>
@@ -599,7 +600,7 @@
                             </p>
                             <div class="content-section__header__screen-container" style="margin: 70px 0 0 0;">
                                 <img src="./assets/img/camera_hero_screen__tgpl9q3xy1ei_medium.png" alt=""
-                                    class="content-section__header__small-pic">
+                                    class="content-section__header__small-pic brighten-effect wow">
                                 <img src="./assets/img/camera_hero_hardware__cfpmer0zbeeu_large.jpg" alt=""
                                     class="content-section__header__big-pic">
                             </div>
@@ -663,7 +664,7 @@
                             <div class="content-section__header__screen-container" style="margin: 70px 0 0 0;">
 
                                 <img src="./assets/img/magic_keyboard__brx9diaauwaa_large.jpg" alt=""
-                                    class="content-section__header__big-pic">
+                                    class="content-section__header__big-pic keyboard-margin-img">
                             </div>
                         </div>
                     </div>
@@ -741,11 +742,124 @@
                         </div>
                     </div>
                 </div>
+                <div class="content-section content-conectivity section-padding-top">
+                    <div class="content-section__header">
+                        <div class="grid wide">
+                            <div class="content-section__header__title--grey">Connectivity</div>
+                            <div class="content-section__header__title--white">Make connections.</div>
+                            <div class="content-section__header__title--white">Faster than ever.</div>
+                        </div>
+                        <div class="content-conectivity__pic-container">
+                            <img src="./assets/img/connectivity__e3efjadx4suq_large.jpg" alt=""
+                                class="content-conectivity__pic">
+                        </div>
+                    </div>
+                    <div class="content-tag">
+                        <div class="row">
+                            <div class="col l-12">
+                                <div class="content-tag-item content-tag-conectivity" style="margin:0;">
+                                    <div class="content-tag-header"></div>
+                                    <div class="content-tag-text-field-container-row  section-padding-left">
+                                        <div class="col l-6 content-tag-text-field-container  content-centered">
+                                            <div class="content-tag-touch-id__text-container">
+                                                <p>Ultra‑high bandwidth meets ultra‑versatility. Thunderbolt enables
+                                                    data transfer, charging, and video output all through a single port
+                                                    — and MacBook Pro has two of them. Wi‑Fi 6 keeps MacBook Pro going
+                                                    strong as more and more devices join the network. And the headphone
+                                                    jack even supports high‑impedance headphones.</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col l-5 content-tag-text-field-container-row content-tag-touch-id-icon ">
+                                            <div class="content-tag-touch-id__icon-container">
+                                                <img src="./assets/img/connectivity_icon_charging__fvu6t1jadniy_large.png"
+                                                    alt="" class="touch-id-img-1">
+                                                <span>Charging</span>
+                                            </div>
+                                            <div class="content-tag-touch-id__icon-container">
+                                                <img src="./assets/img/connectivity_icon_display__e3h2l4likui6_large.png"
+                                                    alt="" class="touch-id-img-1">
+                                                <span>External display</span>
+                                            </div>
+                                            <div class="content-tag-touch-id__icon-container">
+                                                <img src="./assets/img/connectivity_icon_transfer__e5ab927gbhkm_large.png"
+                                                    alt="" class="touch-id-img-1">
+                                                <span>Data transfer
+                                                    up to 40Gb/s15</span>
+                                            </div>
+                                            <div class="content-tag-touch-id__icon-container">
+                                                <img src="./assets/img/connectivity_icon_connect__bvlfq6ibdf36_large.png"
+                                                    alt="" class="touch-id-img-1">
+                                                <span>Connecting your devices</span>
+                                            </div>
+                                            <div class="content-tag-touch-id__icon-container">
+                                                <img src="./assets/img/connectivity_icon_wifi__b3yl420hbsnm_large.png"
+                                                    alt="" style="width:84px">
+                                                <span>Wi-Fi 6 up to 1.2Gb/s throughput15</span>
+                                            </div>
+                                            <div class="content-tag-touch-id__icon-container">
+                                                <img src="./assets/img/connectivity_icon_headphone__fbuvwwkwwxqy_large.png"
+                                                    alt="" class="touch-id-img-1">
+                                                <span>3.5 mm headphone jack</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bottom-content">
+                <div class="grid big-wide">
+                    <div class="content-ar content-tag-item--grey-bg">
+                        <div class="col l-6 content-tag-text-field-container content-centered align-centered"
+                            style="margin-left:8.3333%">
+                            <div class="ar-container">
+                                <div class="ar-icon">
+                                    <img src="./assets/img/ar_icon__bzce6wem1gya_large.png" alt="">
+                                </div>
+                                <div class="ar-title-container">Use AR to see MacBook Pro 13” in your workspace.</div>
+                                <p class="ar-text-container">Open this page using Safari on your iPhone or iPad.</p>
+                                <div class="ar-colornav">
+                                    <ul class="colornav-list">
+                                        <li class="colornav-item">
+                                            <div class="btn-color mac-choose-active">
+                                                <div class="colornav-circle--grey">
+                                                    <span class="colornav-label text--long colornav-label-active">Space
+                                                        grey</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="colornav-item">
+                                            <div class="btn-color">
+                                                <div class="colornav-circle--silver">
+                                                    <span class="colornav-label text--short ">Silver</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-5 content-tag-text-field-container">
+
+                            <!-- <div class="ar-content__img-container ">
+                            </div> -->
+                            <div class="ar-content__img-container">
+                                <img src="./assets/img/ar_silver__esaq47dfhtaq_large.jpg" alt="" class="ar-img">
+                                <img src="./assets/img/ar_spacegray__b9qevc88chf6_large.jpg" alt=""
+                                    class="ar-img img-no-active">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script>
-        ScrollReveal().reveal('.battery-fill-up', {});
+        new WOW().init();
     </script>
 </body>
 

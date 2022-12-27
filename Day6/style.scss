@@ -1,0 +1,29 @@
+.button {
+  // cách 1
+  height: 600px;
+  width: 600px;
+  background-color: aquamarine;
+  .button__icon {
+    background-color: pink;
+    height: 600px;
+    width: 600px;
+  }
+
+  // cách 2
+  &__icon {
+    background-color: pink;
+    height: 600px;
+    width: 600px;
+
+    &--left {
+      height: 30px;
+      width: 30px;
+      background-color: saddlebrown;
+    }
+    &--right {
+      height: 30px;
+      width: 30px;
+      background-color: yellow;
+    }
+  }
+}

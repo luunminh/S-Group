@@ -1,0 +1,25 @@
+.button {
+  height: 600px;
+  width: 600px;
+  background-color: aquamarine;
+}
+.button .button__icon {
+  background-color: pink;
+  height: 600px;
+  width: 600px;
+}
+.button__icon {
+  background-color: pink;
+  height: 600px;
+  width: 600px;
+}
+.button__icon--left {
+  height: 30px;
+  width: 30px;
+  background-color: saddlebrown;
+}
+.button__icon--right {
+  height: 30px;
+  width: 30px;
+  background-color: yellow;
+}/*# sourceMappingURL=style.css.map */

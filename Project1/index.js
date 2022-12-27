@@ -23,73 +23,90 @@ const endedVid = function () {
   hideBtn.style.opacity = "1";
 };
 
+// function replay vid perform
 function replayVidPerform() {
   const element = document.querySelector(".thermal-memory-bg");
   console.log(element);
   element.play();
 }
 
-//play hardware vid
+//play hardware vid and audio vid
 const playHardWareVid = () => {
   const vidElement = document.querySelector(".thermal-memory-bg");
+  const audioVidElemenet = document.querySelector(".audio-vid");
+
   // console.log(autoElement);
   autoElement.play();
 
-  var windowHeight = window.innerHeight;
-  var revealTop = elements[i].getBoundingClientRect().top;
-  var revealPoint = 100;
+  let windowHeight = window.innerHeight;
+  let revealTop = elements[i].getBoundingClientRect().top;
+  let audioVidRevealTop = audioVidElemenet.getBoundingClientRect().top;
+  let revealPoint = 100;
   if (revealTop < windowHeight - revealPoint) {
     vidElement.play();
   }
+  if (audioVidRevealTop < windowHeight - revealPoint) {
+    audioVidElemenet.play();
+  }
 };
 
-// bars animation start when scoll
-document.addEventListener("scroll", revealOnScroll);
+//onclick event when change macbook color
+let checkMacColor = true;
+const colornavElements = document.querySelectorAll(".colornav-item");
+colornavElements[0].addEventListener("click", () => {
+  checkMacColor = true;
+  handleMacColor();
+});
+colornavElements[1].addEventListener("click", () => {
+  checkMacColor = false;
+  handleMacColor();
+});
+function handleMacColor() {
+  const macColorImg = document.querySelectorAll(".ar-img");
+  // color === space grey
+  if (checkMacColor) {
+    // remove
+    colornavElements[1]
+      .querySelector(".btn-color")
+      .classList.remove("mac-choose-active");
 
-function revealOnScroll() {
-  const elements = document.querySelectorAll(".lazy-loading-bar");
-  const batteryElement = document.querySelector(".fill-element");
-  const brightScreenElement = document.querySelector(
-    ".content-display__header__pic-screen"
-  );
-  const brightScreenElement2 = document.querySelector(
-    ".content-section__header__small-pic"
-  );
-  const trueToneContainterElement = document.querySelector(
-    ".content-display__badge"
-  );
-  const trueToneBgElement = document.querySelector(".content-display-bg--cold");
-  const audioVidElemenet = document.querySelector(".audio-vid");
-  // console.log(document.querySelectorAll(".content-display-bg--cold"));
+    colornavElements[1]
+      .querySelector(".colornav-label")
+      .classList.remove("colornav-label-active");
 
-  for (let i = 0; i < elements.length; i++) {
-    var windowHeight = window.innerHeight;
-    var revealTop = elements[i].getBoundingClientRect().top;
-    var batteryRevealTop = batteryElement.getBoundingClientRect().top;
-    var brightenRevealTop = brightScreenElement.getBoundingClientRect().top;
-    var brightenRevealTop2 = brightScreenElement2.getBoundingClientRect().top;
-    var audioVidRevealTop = audioVidElemenet.getBoundingClientRect().top;
+    // adding
+    colornavElements[0]
+      .querySelector(".btn-color")
+      .classList.add("mac-choose-active");
 
-    var trueToneRevealTop =
-      trueToneContainterElement.getBoundingClientRect().top;
-    var revealPoint = 100;
-    if (revealTop < windowHeight - revealPoint) {
-      elements[i].classList.add("bar-animation");
-    }
-    if (batteryRevealTop < windowHeight - revealPoint) {
-      batteryElement.classList.add("battery-fill-up");
-    }
-    if (brightenRevealTop < windowHeight - revealPoint) {
-      brightScreenElement.classList.add("brighten-effect");
-    }
-    if (brightenRevealTop2 < windowHeight - revealPoint) {
-      brightScreenElement2.classList.add("brighten-effect");
-    }
-    if (trueToneRevealTop < windowHeight - revealPoint) {
-      trueToneBgElement.classList.add("true-tone-effect");
-    }
-    if (audioVidRevealTop < windowHeight - revealPoint) {
-      audioVidElemenet.play();
-    }
+    colornavElements[0]
+      .querySelector(".colornav-label")
+      .classList.add("colornav-label-active");
+
+    // change image
+    macColorImg[1].classList.remove("img-no-active");
+  }
+  // color === silver
+  else {
+    // remove
+    colornavElements[0]
+      .querySelector(".btn-color")
+      .classList.remove("mac-choose-active");
+
+    colornavElements[0]
+      .querySelector(".colornav-label")
+      .classList.remove("colornav-label-active");
+
+    // adding
+    colornavElements[1]
+      .querySelector(".btn-color")
+      .classList.add("mac-choose-active");
+
+    colornavElements[1]
+      .querySelector(".colornav-label")
+      .classList.add("colornav-label-active");
+
+    // change image
+    macColorImg[1].classList.add("img-no-active");
   }
 }
