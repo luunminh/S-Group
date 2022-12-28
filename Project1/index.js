@@ -51,20 +51,20 @@ const playHardWareVid = () => {
 };
 
 //onclick event when change macbook color
-let checkMacColor = true;
+let isGreyColorLap = true;
 const colornavElements = document.querySelectorAll(".colornav-item");
+const macColorImg = document.querySelectorAll(".ar-img");
 colornavElements[0].addEventListener("click", () => {
-  checkMacColor = true;
+  isGreyColorLap = true;
   handleMacColor();
 });
 colornavElements[1].addEventListener("click", () => {
-  checkMacColor = false;
+  isGreyColorLap = false;
   handleMacColor();
 });
 function handleMacColor() {
-  const macColorImg = document.querySelectorAll(".ar-img");
   // color === space grey
-  if (checkMacColor) {
+  if (isGreyColorLap) {
     // remove
     colornavElements[1]
       .querySelector(".btn-color")

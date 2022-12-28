@@ -55,6 +55,9 @@
   background-repeat: no-repeat;
   background-color: var(--primary-color);
 }
+.content-bottom-bg {
+  background-color: var(--bottom-content-container-tag-color);
+}
 
 .content-tag-item--grey-bg {
   margin-top: 30px;
@@ -64,7 +67,7 @@
   z-index: 0;
   box-sizing: border-box;
   border-radius: var(--tile-border-radius);
-  max-height: 600px;
+  height: 600px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-color: var(--bottom-content-container-tag-color);
@@ -1637,6 +1640,284 @@ html {
     .img-no-active {
       display: block;
       opacity: 0;
+    }
+  }
+
+  // content buy and compare
+  .content-buy {
+    .content-buy__header {
+      max-width: 616px;
+      margin-top: 67px;
+      text-align: center;
+      color: #fff;
+      font-size: 64px;
+      font-weight: 600;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 70px;
+    }
+    .content-buy__compare-link {
+      margin: 43px 0 81px;
+      text-align: center;
+    }
+    .content-buy__compare-link :hover {
+      text-decoration: underline;
+    }
+    .content-buy__compare-link > a {
+      font-size: 21px;
+      text-align: center;
+      color: var(--blue-color);
+    }
+
+    .content-buy__list {
+      margin-bottom: 68px;
+
+      .grid-system {
+        font-size: 14px;
+        line-height: 1.42859;
+        font-weight: 300;
+        letter-spacing: -0.016em;
+        color: #f5f5f7;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-row-gap: 0;
+        grid-column-gap: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        grid-template-areas:
+          "mba1-img mba2-img mba13-img mba14-img"
+          "mba1-color mba2-color mba13-color mba14-color"
+          "mba1-name mba2-name mba13-name mba14-name"
+          "mba1-special mba2-special mba13-special mba14-special"
+          "mba1-price mba2-price mba13-price mba14-price"
+          "mba1-display mba2-display mba13-display mba14-display"
+          "mba1-cpu mba2-cpu mba13-cpu mba14-cpu"
+          "mba1-desc mba2-desc mba13-desc mba14-desc"
+          "mba1-btn mba2-btn mba13-btn mba14-btn"
+          "mba1-more mba2-more mba13-more mba14-more";
+        flex-direction: column;
+        align-items: flex-start;
+
+        .product-img-grid-1 {
+          grid-area: mba1-img;
+        }
+        .product-color-grid-1 {
+          grid-area: mba1-color;
+        }
+        .product-name-grid-1 {
+          grid-area: mba1-name;
+        }
+        .product-special-grid-1 {
+          grid-area: mba1-special;
+        }
+        .product-price-grid-1 {
+          grid-area: mba1-price;
+        }
+        .product-display-grid-1 {
+          grid-area: mba1-display;
+        }
+        .product-chip-grid-1 {
+          grid-area: mba1-cpu;
+        }
+        .product-desc-grid-1 {
+          grid-area: mba1-desc;
+        }
+        .product-btn-grid-1 {
+          grid-area: mba1-btn;
+        }
+        .product-more-grid-1 {
+          grid-area: mba1-more;
+        }
+        // product 2
+        .product-img-grid-2 {
+          grid-area: mba2-img;
+        }
+        .product-color-grid-2 {
+          grid-area: mba2-color;
+        }
+        .product-name-grid-2 {
+          grid-area: mba2-name;
+        }
+        .product-special-grid-2 {
+          grid-area: mba2-special;
+        }
+        .product-price-grid-2 {
+          grid-area: mba2-price;
+        }
+        .product-display-grid-2 {
+          grid-area: mba2-display;
+        }
+        .product-chip-grid-2 {
+          grid-area: mba2-cpu;
+        }
+        .product-desc-grid-2 {
+          grid-area: mba2-desc;
+        }
+        .product-btn-grid-2 {
+          grid-area: mba2-btn;
+        }
+        .product-more-grid-2 {
+          grid-area: mba2-more;
+        }
+        // product 3
+        .product-img-grid-3 {
+          grid-area: mba13-img;
+        }
+        .product-color-grid-3 {
+          grid-area: mba13-color;
+        }
+        .product-name-grid-3 {
+          grid-area: mba13-name;
+        }
+        .product-special-grid-3 {
+          grid-area: mba13-special;
+        }
+        .product-price-grid-3 {
+          grid-area: mba13-price;
+        }
+        .product-display-grid-3 {
+          grid-area: mba13-display;
+        }
+        .product-chip-grid-3 {
+          grid-area: mba13-cpu;
+        }
+        .product-desc-grid-3 {
+          grid-area: mba13-desc;
+        }
+        .product-btn-grid-3 {
+          grid-area: mba13-btn;
+        }
+        .product-more-grid-3 {
+          grid-area: mba13-more;
+        }
+        // product 4
+        .product-img-grid-4 {
+          grid-area: mba14-img;
+        }
+        .product-color-grid-4 {
+          grid-area: mba14-color;
+        }
+        .product-name-grid-4 {
+          grid-area: mba14-name;
+        }
+        .product-special-grid-4 {
+          grid-area: mba14-special;
+        }
+        .product-price-grid-4 {
+          grid-area: mba14-price;
+        }
+        .product-display-grid-4 {
+          grid-area: mba14-display;
+        }
+        .product-chip-grid-4 {
+          grid-area: mba14-cpu;
+        }
+        .product-desc-grid-4 {
+          grid-area: mba14-desc;
+        }
+        .product-btn-grid-4 {
+          grid-area: mba14-btn;
+        }
+        .product-more-grid-4 {
+          grid-area: mba14-more;
+        }
+
+        .product-img {
+          width: 168px;
+          height: 114px;
+        }
+        .product-img-big {
+          width: 213px;
+          height: 114px;
+        }
+        .product-color-img {
+          margin-top: 18px;
+        }
+        .product-name {
+          position: relative;
+          margin-top: 30px;
+          color: #fff;
+          font-size: 24px;
+          line-height: 1.16667;
+          font-weight: 500;
+        }
+        .product-new::before {
+          content: "New";
+          font-size: 12px;
+          color: #bf8400;
+          position: absolute;
+          top: -14px;
+          font-weight: 300;
+          line-height: 12px;
+        }
+        .product-special-chip {
+          font-weight: 400;
+          margin-top: -28px;
+          margin-bottom: 11px;
+        }
+        .product-price {
+          margin-top: 10px;
+        }
+        .product-display {
+          margin-top: 35px;
+        }
+        .product-chip {
+          margin-top: 12px;
+        }
+        .product-desc-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          .product-desc-item {
+            margin-top: 12px;
+          }
+        }
+        .product-btn {
+          margin-top: 20px;
+          .btn {
+            max-width: 45px;
+          }
+        }
+        .product-learn-more {
+          margin-top: 8px;
+          height: 17px;
+        }
+        .product-learn-more > a {
+          color: var(--blue-color);
+        }
+        .product-learn-more:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // content macOs
+  .content-macOs {
+    background-image: url("../img/router_macos_monterey__fz47xuao5tiu_large.jpg");
+
+    .content-macOs__container {
+      margin-top: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .content-macOs__header-img {
+        margin-bottom: 11px;
+      }
+      .content-macOs__text {
+        font-size: 48px;
+        line-height: 1.08349;
+        font-weight: 600;
+        letter-spacing: -0.003em;
+        color: #fff;
+      }
+      .content-macOs__more {
+        margin-top: 12px;
+      }
+      .content-macOs__more:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
