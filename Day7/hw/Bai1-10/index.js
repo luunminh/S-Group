@@ -45,6 +45,7 @@ function getDateTime() {
 const now = getDateTime();
 // console.log(now); // Now is: 23:30 28/12/2022
 
+
 // ********* Bài 3 *********
 function allFormatsOfDate({ day, month, year }) {
   return `

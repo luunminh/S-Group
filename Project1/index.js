@@ -3,14 +3,6 @@ const playvid = () => {
     const autoElement = document.querySelector(".laptop-open-vid");
     // console.log(autoElement);
     autoElement.play();
-
-    // document.querySelector(".laptop-open-vid").onended = () => {
-    //     const autoElement = document.querySelector(".laptop-open-vid");
-    //     // const macPic = document.querySelector(".laptop-open-img");
-    //     // console.log(macPic);
-    //     // autoElement.style.display = "none";
-    //     // macPic.style.display = "block";
-    // };
 };
 
 // function replay vid performance
@@ -26,7 +18,6 @@ const endedVid = function () {
 // function replay vid perform
 function replayVidPerform() {
     const element = document.querySelector(".thermal-memory-bg");
-    console.log(element);
     element.play();
 }
 
@@ -35,11 +26,8 @@ const playHardWareVid = () => {
     const vidElement = document.querySelector(".thermal-memory-bg");
     const audioVidElemenet = document.querySelector(".audio-vid");
 
-    // console.log(autoElement);
-    autoElement.play();
-
     let windowHeight = window.innerHeight;
-    let revealTop = elements[i].getBoundingClientRect().top;
+    let revealTop = vidElement.getBoundingClientRect().top;
     let audioVidRevealTop = audioVidElemenet.getBoundingClientRect().top;
     let revealPoint = 100;
     if (revealTop < windowHeight - revealPoint) {
@@ -115,6 +103,7 @@ function handleChangePassword() {
     }
 }
 window.addEventListener("scroll", handleChangePassword);
+window.addEventListener("scroll", playHardWareVid);
 
 //onclick event when change macbook color
 let isGreyColorLap = true;

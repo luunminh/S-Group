@@ -1329,18 +1329,17 @@ html {
 .content-display-bg--warm {
   z-index: 0;
   opacity: 0;
-  -webkit-animation: trueTone-fadeIn 0.1s ease-in-out forwards;
-          animation: trueTone-fadeIn 0.1s ease-in-out forwards;
+  -webkit-animation: trueTone-fadeIn 2s ease-in-out forwards;
+          animation: trueTone-fadeIn 2s ease-in-out forwards;
 }
 
 .content-display-bg--cold {
-  opacity: 1;
   z-index: 1;
 }
 
 .true-tone-effect {
-  -webkit-animation: trueTone-fadeOut 1.5s ease-in-out forwards;
-          animation: trueTone-fadeOut 1.5s ease-in-out forwards;
+  -webkit-animation: trueTone-fadeOut 2s ease-in-out forwards;
+          animation: trueTone-fadeOut 2s ease-in-out forwards;
 }
 
 .true-tone-img {
