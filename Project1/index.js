@@ -67,6 +67,7 @@ let passwordArr = [
     "•",
 ];
 let textArr = ["S", "e", "c", "u", "r", "e", "l", "y", "y", "o", "u", "r", "s"];
+let prePosition = 0;
 function handleChangePassword() {
     const lockTag = document.querySelectorAll(".lock-mask");
     const lockTagHeight = lockTag[0].getBoundingClientRect().top;
@@ -74,8 +75,10 @@ function handleChangePassword() {
     // console.log(`locktagHeight ${lockTagHeight}`);
     if (
         lockTagHeight <= (screenHeigth * 1.5) / 3 &&
-        Number.parseInt(lockTagHeight) % 2 == 0
+        Number.parseInt(lockTagHeight) % 2 == 0 &&
+        lockTagHeight < prePosition
     ) {
+        prePosition = lockTagHeight;
         for (let i = 0; i < passwordArr.length; i++) {
             if (passwordArr[i] === "•") {
                 let tmp = passwordArr[i];
@@ -92,8 +95,10 @@ function handleChangePassword() {
     }
     if (
         lockTagHeight > (screenHeigth * 1.5) / 3 &&
-        Number.parseInt(lockTagHeight) % 2 == 0
+        Number.parseInt(lockTagHeight) % 2 == 0 &&
+        lockTagHeight > prePosition
     ) {
+        prePosition = lockTagHeight;
         for (let i = textArr.length - 1; i >= 0; i--) {
             if (textArr[i] === "•") {
                 let tmp = passwordArr[i];
@@ -177,6 +182,7 @@ function main() {
     const lockTagHeight = lockTag[0].getBoundingClientRect().top;
     const screenHeigth = window.innerHeight;
     if (lockTagHeight < (screenHeigth * 1.5) / 3) {
+        prePosition = 10000;
         let tmp = passwordArr;
         passwordArr = textArr;
         textArr = tmp;
