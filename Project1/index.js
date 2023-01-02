@@ -94,7 +94,7 @@ function handleChangePassword() {
         lockTagHeight > (screenHeigth * 1.5) / 3 &&
         Number.parseInt(lockTagHeight) % 2 == 0
     ) {
-        for (let i = 0; i < textArr.length; i++) {
+        for (let i = textArr.length - 1; i >= 0; i--) {
             if (textArr[i] === "•") {
                 let tmp = passwordArr[i];
                 passwordArr[i] = textArr[i];
@@ -102,8 +102,8 @@ function handleChangePassword() {
                 let lockTagArr1 = passwordArr.slice(0, 8);
                 let lockTagArr2 = passwordArr.slice(8, 13);
                 lockTagArr2 = lockTagArr2.concat(".");
-                lockTag[0].innerText = lockTagArr1.join("");
                 lockTag[1].innerText = lockTagArr2.join("");
+                lockTag[0].innerText = lockTagArr1.join("");
                 break;
             }
         }
