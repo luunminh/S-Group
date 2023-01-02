@@ -125,6 +125,14 @@
   padding-top: 170px;
 }
 
+.learn-more-link {
+  color: var(--blue-color);
+}
+
+.learn-more-link:hover {
+  text-decoration: underline;
+}
+
 .section-padding-left {
   padding-left: var(--title-padding);
 }
@@ -1860,14 +1868,23 @@ html {
   letter-spacing: 0.011em;
 }
 .bottom-content .content-relate .content-relate__text .content-relate__text--title {
+  letter-spacing: -0.011em;
   font-size: 48px;
   font-weight: 600;
-  max-width: 75%;
+  max-width: 100%;
   text-align: center;
   line-height: 50px;
   margin-top: 12px;
   margin-left: auto;
   margin-right: auto;
+}
+.bottom-content .content-relate .content-relate__text .text-title-width {
+  max-width: 75%;
+}
+.bottom-content .content-relate .content-relate__text .content-relate__text--desc {
+  text-align: center;
+  width: 76%;
+  margin-top: 12px;
 }
 .bottom-content .content-relate .content-relate__text .content-relate__btn {
   margin-top: 12px;
@@ -1879,6 +1896,26 @@ html {
 .bottom-content .content-relate .content-relate__img-container .content-relate__img-1 {
   position: absolute;
   left: -40px;
+}
+.bottom-content .content-relate .content-relate__img-container .content-relate__img-2 {
+  position: absolute;
+  top: 0;
+}
+.bottom-content .content-relate-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bottom-content .content-relate-bg .content-relate__text .content-relate__text--desc {
+  width: 100%;
+}
+.bottom-content .content-relate-bg .content-relate__text .content-relate__text--desc:hover > a {
+  text-decoration: underline;
+}
+.bottom-content .bg-1 {
+  background-image: url("../img/router_education__du950ftxqoqe_large_2x.jpg");
+}
+.bottom-content .bg-2 {
+  background-image: url("../img/router_business__btsiu4bv1bte_large_2x.jpg");
 }
 
 @-webkit-keyframes sharpe {
