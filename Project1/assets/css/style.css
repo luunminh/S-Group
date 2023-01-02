@@ -1113,7 +1113,7 @@ html {
   padding: var(--title-padding);
   padding-bottom: 0;
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 600;
   margin-bottom: 9px;
   line-height: 25px;
@@ -2125,6 +2125,9 @@ html {
 }
 .footer .footer__bottom .footer__bottom__legal .legal__left-side .legal__left-side__item > a:hover {
   text-decoration: underline;
+}
+.footer .footer__bottom .footer__bottom__legal .legal__right-side {
+  margin-top: 5px;
 }
 .footer .footer__bottom .footer__bottom__legal .legal__right-side:hover {
   text-decoration: underline;

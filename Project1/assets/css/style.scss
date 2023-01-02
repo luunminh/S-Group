@@ -1143,7 +1143,7 @@ html {
     padding: var(--title-padding);
     padding-bottom: 0;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 600;
     margin-bottom: 9px;
     line-height: 25px;
@@ -2224,6 +2224,9 @@ html {
                 .legal__left-side__item > a:hover {
                     text-decoration: underline;
                 }
+            }
+            .legal__right-side {
+                margin-top: 5px;
             }
             .legal__right-side:hover {
                 text-decoration: underline;
