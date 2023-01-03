@@ -438,12 +438,20 @@
     .wide {
         width: 644px;
     }
+
+    .big-wide {
+        width: 780px;
+    }
 }
 
 /* > PC low resolution */
 @media (min-width: 1024px) and (max-width: 1239px) {
     .wide {
         width: 984px;
+    }
+
+    .big-wide {
+        width: 1043px;
     }
 
     .wide .row {

@@ -181,5 +181,12 @@ function main() {
         lockTag[0].innerText = lockTagArr1.join("");
         lockTag[1].innerText = lockTagArr2.join("");
     }
+
+    // mobile event
+    const menuFirstHeaderTag = document.querySelector(".menu-btn");
+
+    menuFirstHeaderTag.onclick = () => {
+        console.log(menuFirstHeaderTag);
+    };
 }
 main();

@@ -8,8 +8,8 @@
     <title>Macbook Pro 13 inch - Apple</title>
     <!-- <link rel="shortcut icon" type="image/png" href="/assets/img/" sizes="" /> -->
     <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <script src="./index.js" defer></script>
@@ -25,8 +25,16 @@
             <div class="first-header">
                 <div class="grid wide">
                     <div class="first-header__navbar">
-                        <div class="first-header__navbar__item">
-                            <iconify-icon icon="raphael:apple" class="first-header__navbar__item__icon"></iconify-icon>
+                        <!-- mobile -->
+                        <div class="first-header__navbar__item-mobile menu-btn">
+                            <iconify-icon icon="akar-icons:two-line-horizontal"
+                                class="first-header__navbar__item__icon"></iconify-icon>
+                            </iconify-icon>
+                        </div>
+                        <!-- movile and PC -->
+                        <div class="first-header__navbar__item-mobile first-header__navbar__item ">
+                            <iconify-icon icon="raphael:apple"
+                                class="first-header__navbar__item__icon logo-header-color"></iconify-icon>
                         </div>
                         <div class="first-header__navbar__item">
                             <span>Store</span>
@@ -63,7 +71,8 @@
                                 class="first-header__navbar__item__icon search-icon">
                             </iconify-icon>
                         </div>
-                        <div class="first-header__navbar__item">
+                        <!-- mobile and pc -->
+                        <div class="first-header__navbar__item-mobile first-header__navbar__item">
                             <iconify-icon icon="majesticons:shopping-bag-line"
                                 class="first-header__navbar__item__icon cart-icon">
                             </iconify-icon>
@@ -78,16 +87,23 @@
                             <a href="">MacBook Pro 13"</a>
                         </div>
                         <div class="fix-header__right">
-                            <div class="fix-header__right__item no-active">
-                                Overview
+                            <div class="fix-header__right__item-container">
+                                <div class="fix-header__right__item no-active">
+                                    Overview
+                                </div>
+                                <div class="fix-header__right__item active">
+                                    Why Mac
+                                </div>
+                                <div class="fix-header__right__item active">
+                                    Tech Specs
+                                </div>
                             </div>
-                            <div class="fix-header__right__item active">
-                                Why Mac
+                            <div class="fix-header__right__item-mobile ">
+                                <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"
+                                    class="first-header__navbar__item__icon fix-header-menu-icon"></iconify-icon>
+
                             </div>
-                            <div class="fix-header__right__item active">
-                                Tech Specs
-                            </div>
-                            <div class="fix-header__right__item btn">
+                            <div class="fix-header__right__item-mobile fix-header__right__item btn">
                                 Buy
                             </div>
                         </div>
@@ -149,21 +165,23 @@
                         streams of 4K and 8K ProRes video with the high-performance media engine. And do it all at
                         once with up to 24GB of faster unified memory.
                     </p>
-                    <div class="section-content__feature">
-                        <div class="section-content__feature__item">
-                            <div class="section-content__feature__item__up">Up to</div>
-                            <div class="section-content__feature__item__number">1.4x</div>
-                            <div class="section-content__feature__item__desc">faster than M1 model</div>
-                        </div>
-                        <div class="section-content__feature__item">
-                            <div class="section-content__feature__item__up">Up to</div>
-                            <div class="section-content__feature__item__number">6x</div>
-                            <div class="section-content__feature__item__desc">faster than Intel-based model</div>
-                        </div>
-                        <div class="section-content__feature__item">
-                            <div class="section-content__feature__item__up">Up to</div>
-                            <div class="section-content__feature__item__number">20 hrs</div>
-                            <div class="section-content__feature__item__desc">battery life</div>
+                    <div class="section-content__feature__container">
+                        <div class="section-content__feature">
+                            <div class="section-content__feature__item">
+                                <div class="section-content__feature__item__up">Up to</div>
+                                <div class="section-content__feature__item__number">1.4x</div>
+                                <div class="section-content__feature__item__desc">faster than M1 model</div>
+                            </div>
+                            <div class="section-content__feature__item">
+                                <div class="section-content__feature__item__up">Up to</div>
+                                <div class="section-content__feature__item__number">6x</div>
+                                <div class="section-content__feature__item__desc">faster than Intel-based model</div>
+                            </div>
+                            <div class="section-content__feature__item">
+                                <div class="section-content__feature__item__up">Up to</div>
+                                <div class="section-content__feature__item__number">20 hrs</div>
+                                <div class="section-content__feature__item__desc">battery life</div>
+                            </div>
                         </div>
                     </div>
                     <div class="section-content__btn-container">
@@ -179,10 +197,10 @@
                     <div class="content-performance__header">Performance</div>
                     <div class="content-performance__content">
                         <div class="content-performance__text-content row sm-gutter">
-                            <div class="content-performance__text--left-side col l-3">
+                            <div class="content-performance__text--left-side col l-3 m-3">
                                 <h2>M2 brings more power. To go</h2>
                             </div>
-                            <div class="content-performance__text--right-side col l-9">
+                            <div class="content-performance__text--right-side col l-8 m-8">
                                 <div class="content-performance__text--right-side__container">
                                     <div class="text-right-side__header">
                                         <h2>Compared to Macbook Pro 13" with M1</h2>
@@ -288,15 +306,14 @@
                 </div>
                 <div class="content-hardware content-tag ">
                     <div class="row ">
-                        <div class="col l-8">
+                        <div class="col l-8 m-6">
                             <div class="content-hardware__left-side  content-tag-item">
                                 <div class="content-hardware__left-side__header content-tag-header">
                                     <div>Thermal efficiency</div>
                                 </div>
-                                <div class="content-tag-text-field-container-row">
-
+                                <div class="content-tag-text-field-container content-centered">
                                     <div
-                                        class="content-hardware__left-side__container content-tag-text-field-container-row col l-6">
+                                        class="content-hardware__left-side__container content-tag-text-field-container-row col l-6 m-12">
                                         <div class="thermal-desc">
                                             <div class="thermal-desc__container">
                                                 <p> Active cooling sustains blazing‑fast performance.</p>
@@ -329,7 +346,7 @@
 
                             </div>
                         </div>
-                        <div class="col l-4 ">
+                        <div class="col l-4 m-6">
                             <div class="content-hardware__rigth-side content-tag-item">
                                 <div class="hardware-container">
                                     <div class="content-hardware_rigth-side__header">
@@ -1576,6 +1593,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="modal">
+
     </div>
     <script>
         new WOW().init();
