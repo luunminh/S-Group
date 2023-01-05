@@ -739,7 +739,7 @@ html {
   margin: 0;
   font-weight: 600;
   line-height: 36px;
-  width: 350px;
+  max-width: 350px;
 }
 
 .content-performance__text--right-side__container {
@@ -848,7 +848,7 @@ html {
   color: transparent;
   opacity: 0;
   background-color: #d2d2d7;
-  max-width: 56%;
+  max-width: 50%;
 }
 
 .bar-m1-1 {
@@ -877,7 +877,6 @@ html {
   line-height: 56px;
   font-size: 56px;
   font-weight: 600;
-  margin-left: 20px;
   margin-top: -10px;
 }
 

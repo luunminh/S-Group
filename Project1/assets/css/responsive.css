@@ -310,13 +310,17 @@
     }
 
     .margin-tag {
-        margin: 0;
+        margin: 0 24px;
         overflow: hidden;
     }
 
 
     .content-tag-item {
         min-height: 546px;
+    }
+
+    .section-padding-top {
+        padding-top: 100px;
     }
 
     /*first header  */
@@ -407,7 +411,7 @@
     }
 
     .big-wide {
-        max-width: 400px !important;
+        max-width: 448px !important;
     }
 
     .section-content__title {
@@ -422,6 +426,14 @@
 
     .first__content__info__price {
         padding-left: 18px;
+    }
+
+    .first__content__info__chip {
+        margin-top: 32px;
+    }
+
+    .first__content__info__chip>span {
+        font-size: 28px;
     }
 
     .section-content__desc {
@@ -450,9 +462,14 @@
         display: block;
     }
 
+    .section-content__btn-container {
+        margin: 20px 0 150px;
+    }
+
     .content-performance__header {
         font-size: 19px;
     }
+
 
     .content-performance__text--right-side__container {
         margin-left: 0;
@@ -565,6 +582,7 @@
 
     .content-app__info__right-side__desc {
         line-height: 24px;
+        font-size: 22px;
     }
 
 
@@ -619,6 +637,11 @@
 
     .content-battery__right-side__info__container {
         margin: 30px 0 15px;
+        padding-right: 20px;
+    }
+
+    .content-app__info {
+        overflow: hidden;
     }
 
     .storage-value {
@@ -670,6 +693,10 @@
         height: 216px;
         left: 50%;
         margin-left: -185.5px;
+    }
+
+    .content-security__left-side__title__headline {
+        font-size: 44px;
     }
 
     .content-display__header__pic-screen {
@@ -731,5 +758,12 @@
         width: 332px;
         height: 101px;
         margin-left: -166px;
+    }
+}
+
+@media(max-width: 320px) {
+    .margin-tag {
+        overflow: hidden;
+        margin: 0;
     }
 }
