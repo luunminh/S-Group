@@ -32,6 +32,9 @@
     border-radius: 30px;
     overflow: hidden;
 }
+.margin-tag {
+    margin: 0 24px;
+}
 
 .content-tag-header {
     padding: var(--title-padding);
@@ -41,7 +44,8 @@
     /* margin-bottom: 9px; */
     font-weight: 500;
     line-height: 25px;
-    z-index: 2;
+    position: relative;
+    z-index: 5;
 }
 
 .content-tag-item {
@@ -124,6 +128,9 @@
 .section-padding-top {
     padding-top: 170px;
 }
+.padding-top-icon {
+    padding-top: 50px;
+}
 .learn-more-link {
     color: var(--blue-color);
 }
@@ -150,7 +157,7 @@
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    width: 980px;
+    max-width: 980px;
     position: relative;
 }
 
@@ -235,6 +242,9 @@
 
 .keyboard-margin-img {
     margin-bottom: -60px;
+}
+.content-margin-top {
+    margin-top: 30px;
 }
 
 .brighten-effect {
@@ -694,7 +704,7 @@ html {
     color: #fff;
     font-size: 21px;
     margin-bottom: 9px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 25px;
 }
 
@@ -797,19 +807,26 @@ html {
     padding-top: 50px;
     max-width: 612px;
     height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    display: grid;
+    row-gap: 39px;
+    grid-template-columns: 1fr auto;
+}
+.bars-content-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
 }
 
-.bars-content-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+// .bars-content-container {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
 
 .bars-mask {
-    width: 510px;
+    max-width: 510px;
 }
 
 .bar {
@@ -820,7 +837,7 @@ html {
     background: linear-gradient(to right, #ffc600, #e8482e, #9c209d);
     opacity: 0;
     height: 10px;
-    max-width: 490px;
+    max-width: 96%;
 }
 
 .bar-2 {
@@ -829,15 +846,16 @@ html {
     color: transparent;
     opacity: 0;
     background-color: #d2d2d7;
+    max-width: 56%;
 }
 
 .bar-m1-1 {
-    max-width: 350px;
+    // max-width: 350px;
     opacity: 0;
 }
 
 .bar-m1-2 {
-    max-width: 86px;
+    max-width: 20%;
     opacity: 0;
 }
 
@@ -855,10 +873,10 @@ html {
 .bars-num {
     color: var(--pink-color);
     line-height: 56px;
-    width: 100px;
     font-size: 56px;
     font-weight: 600;
     margin-left: 20px;
+    margin-top: -10px;
 }
 
 /* hardware content */
@@ -873,7 +891,7 @@ html {
     border-radius: 30px;
     position: relative;
     z-index: 5;
-    overflow: hidden;
+    // overflow: hidden;
     justify-content: unset;
 }
 
@@ -883,7 +901,7 @@ html {
     color: #fff;
     font-size: 21px;
     margin-bottom: 9px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 25px;
     position: relative;
     z-index: 3;
@@ -902,12 +920,13 @@ html {
     color: var(--white-color);
     margin-bottom: 11px;
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 36px;
-    margin: 30px 0;
+    margin: 30px 0 0 0;
     padding: 0 30px 0 30px;
     z-index: 3;
     letter-spacing: -0.004rem;
+    width: 100%;
 }
 
 .thermal-desc__container {
@@ -936,11 +955,11 @@ html {
 
 .thermal-vid {
     /* position: absolute;
-  z-index: 0;
-  width: 918px;
-  height: 720px;
-  margin: 0px 0 0 0px;
-  left: 0;
+    z-index: 0;
+    width: 918px;
+    height: 720px;
+    margin: 0px 0 0 0px;
+    left: 0;
   top: 0; */
     /* width: 918px;
   height: 720px; */
@@ -957,18 +976,25 @@ html {
   bottom: 0;
   z-index: 0; */
     position: absolute;
-    top: -20px;
+    top: -94px;
     left: 0;
+}
+.thermal-memory-bg-tablet {
+    display: none;
 }
 
 .thermal-memory-bg-vid {
+    display: block;
+}
+.thermal-memory-bg-vid-tablet {
+    display: none;
 }
 
 .content-hardware__rigth-side {
     background-image: url("../img/memory_bg__fu9k4zooujyq_large.jpg");
     border-radius: 30px;
     height: 100%;
-    max-height: 700px;
+    // min-height: 700px;
     background-size: cover;
 }
 
@@ -986,7 +1012,7 @@ html {
     color: #fff;
     font-size: 21px;
     margin-bottom: 9px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 25px;
 }
 
@@ -1038,7 +1064,7 @@ html {
     /* background-image: url("../img/app-mac.png"); */
     /* z-index: 10; */
     /* background-repeat: no-repeat; */
-    max-height: 720px;
+    // max-height: 720px;
 }
 
 .content-app__header {
@@ -1048,16 +1074,22 @@ html {
 }
 
 .content-app__info__left-side__pic-wrap {
-    max-height: 656px;
+    height: 656px;
+    width: 100%;
 }
 
 .content-app__info__left-side__pic {
+    position: absolute;
     display: block;
     width: 787px;
     height: 673px;
     z-index: 1;
     right: 24px;
     top: -72px;
+}
+.content-app__info__left-side__pic-tablet,
+.content-app__info__left-side__pic-mobile {
+    display: none;
 }
 
 .content-app__info {
@@ -1066,6 +1098,7 @@ html {
 .content-app__info__right-side {
     padding: 0 40px;
     margin-bottom: 69px;
+    z-index: 5;
 }
 
 .content-app__info__right-side__title {
@@ -1094,11 +1127,6 @@ html {
     text-align: center;
     /* right: 280px; */
     /* top: 600px; */
-}
-
-.content-app__info__left-side__pic {
-    position: relative;
-    display: block;
 }
 
 .content-app__footer {
@@ -1154,7 +1182,7 @@ html {
 .content-battery__right-side {
     background: linear-gradient(165deg, #2c4735 0%, #1d243e 60%, #101124 90%);
     border-radius: 30px;
-    height: 700px;
+    min-height: 700px;
     z-index: 10;
 }
 
@@ -1188,12 +1216,12 @@ html {
 
 .content-battery__right-side__info__container {
     margin: 60px 0;
-    padding-left: 40px;
+    padding-left: var(--title-padding);
     color: #fff;
 }
 
 .content-battery__info__header {
-    line-height: 60px;
+    line-height: 56px;
     font-size: 56px;
     font-weight: 600;
 }
@@ -1218,6 +1246,9 @@ html {
     height: 643px;
     bottom: -21px;
     left: 60px;
+}
+.battery-render-app-title {
+    display: none;
 }
 
 .content-security {
@@ -1406,6 +1437,7 @@ html {
     z-index: 0;
     top: 0;
     left: 0;
+    right: 0;
 }
 
 .content-section__text-title-container {
