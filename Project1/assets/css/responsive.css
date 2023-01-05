@@ -294,6 +294,16 @@
         height: 228px;
     }
 
+    .content-section__img {
+        width: 377.5px;
+        align-self: flex-end;
+    }
+
+    .content-section__text-title--white {
+        font-size: 28px;
+        max-width: 400px;
+    }
+
 }
 
 
@@ -759,6 +769,8 @@
         height: 101px;
         margin-left: -166px;
     }
+
+
 }
 
 @media(max-width: 320px) {

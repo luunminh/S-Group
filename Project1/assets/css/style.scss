@@ -93,6 +93,7 @@
     position: relative;
     height: 100%;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .content-tag-text-field-container-row {
@@ -107,6 +108,7 @@
     // transform: translateZ(0);
     z-index: 2;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .content-centered {
