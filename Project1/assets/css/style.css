@@ -444,12 +444,12 @@ html {
   color: #fff;
 }
 
-.advs-header > a {
+.advs-header-margin > a {
   padding-right: 3px;
   color: var(--blue-color);
 }
 
-.advs-header > a:hover {
+.advs-header-margin > a:hover {
   text-decoration: underline;
 }
 

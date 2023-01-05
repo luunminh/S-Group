@@ -314,6 +314,7 @@
         overflow: hidden;
     }
 
+
     .content-tag-item {
         min-height: 546px;
     }
@@ -372,6 +373,19 @@
 
     .logo-header-color {
         color: rgba(255, 255, 255, .8);
+    }
+
+    .fix-header__left {
+        font-size: 19px;
+    }
+
+
+    .advs-header-margin {
+        margin: 0 12px;
+    }
+
+    .fix-header__right__item-mobile:nth-child(2) {
+        padding-right: 0;
     }
 
     /* fix-header */
