@@ -69,8 +69,11 @@
   background-color: var(--bottom-content-container-tag-color);
 }
 
+.content-space-between {
+  justify-content: space-between;
+}
+
 .content-tag-item--grey-bg {
-  margin-top: 30px;
   display: flex;
   position: relative;
   z-index: 0;
@@ -268,6 +271,11 @@ a {
 * {
   box-sizing: inherit;
   /*kế thừa thằng cha  */
+}
+
+.content-fit-height {
+  height: 100%;
+  margin-top: 0;
 }
 
 p {
@@ -1724,6 +1732,7 @@ html {
   grid-template-areas: "mba1-img mba2-img mba13-img mba14-img" "mba1-color mba2-color mba13-color mba14-color" "mba1-name mba2-name mba13-name mba14-name" "mba1-special mba2-special mba13-special mba14-special" "mba1-price mba2-price mba13-price mba14-price" "mba1-display mba2-display mba13-display mba14-display" "mba1-cpu mba2-cpu mba13-cpu mba14-cpu" "mba1-desc mba2-desc mba13-desc mba14-desc" "mba1-btn mba2-btn mba13-btn mba14-btn" "mba1-more mba2-more mba13-more mba14-more";
   flex-direction: column;
   align-items: flex-start;
+  margin: 0 auto;
 }
 .bottom-content .content-buy .content-buy__list .grid-system .product-img-grid-1 {
   grid-area: mba1-img;
@@ -1867,7 +1876,7 @@ html {
 .bottom-content .content-buy .content-buy__list .grid-system .product-new::before {
   content: "New";
   font-size: 12px;
-  color: #bf8400;
+  color: #bf4800;
   position: absolute;
   top: -14px;
   font-weight: 300;
@@ -1875,7 +1884,7 @@ html {
 }
 .bottom-content .content-buy .content-buy__list .grid-system .product-special-chip {
   font-weight: 400;
-  margin-top: -28px;
+  margin-top: -30px;
   margin-bottom: 11px;
 }
 .bottom-content .content-buy .content-buy__list .grid-system .product-price {
@@ -1913,7 +1922,7 @@ html {
 }
 .bottom-content .content-macOs {
   background-image: url("../img/router_macos_monterey__fz47xuao5tiu_large.jpg");
-  height: 600px;
+  max-height: 600px;
 }
 .bottom-content .content-macOs .content-macOs__container {
   margin-top: 36px;
@@ -1937,6 +1946,7 @@ html {
 }
 .bottom-content .content-macOs .content-macOs__container .content-macOs__more:hover {
   text-decoration: underline;
+  color: #fff;
 }
 .bottom-content .content-relate {
   padding: 43px 40px 0;
@@ -1977,37 +1987,62 @@ html {
 .bottom-content .content-relate .content-relate__text .content-relate__btn {
   margin-top: 12px;
 }
+.bottom-content .content-relate .content-relate__img-container-row-2 {
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  height: 254px;
+}
+.bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-3 {
+  position: absolute;
+  top: 0;
+  width: 464px;
+  height: 252px;
+}
+.bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-3-mobile {
+  display: none;
+}
+.bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-4 {
+  position: absolute;
+  top: 0px;
+  right: -42px;
+  left: auto;
+  width: 564px;
+  height: 260px;
+}
+.bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-4-mobile {
+  display: none;
+}
 .bottom-content .content-relate .content-relate__img-container {
   position: relative;
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  min-height: 345px;
 }
 .bottom-content .content-relate .content-relate__img-container .content-relate__img-1 {
   position: absolute;
-  left: -40px;
-  margin-top: 40px;
+  margin-top: -40px;
+}
+.bottom-content .content-relate .content-relate__img-container .content-relate__img-1-mobile {
+  display: none;
 }
 .bottom-content .content-relate .content-relate__img-container .content-relate__img-2 {
   position: absolute;
   top: -10px;
-  right: -40px;
 }
-.bottom-content .content-relate .content-relate__img-container .content-relate__img-3 {
-  position: absolute;
-  top: 0;
-}
-.bottom-content .content-relate .content-relate__img-container .content-relate__img-4 {
-  position: absolute;
-  top: 0;
-  right: -30px;
+.bottom-content .content-relate .content-relate__img-container .content-relate__img-2-mobile {
+  display: none;
 }
 .bottom-content .first-row {
   min-height: 680px;
+  height: 100%;
 }
 .bottom-content .content-relate-bg {
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 0;
 }
 .bottom-content .content-relate-bg .content-relate__text .content-relate__text--desc {
   width: 100%;

@@ -30,6 +30,13 @@
         line-height: 40px;
         text-align: left;
     }
+
+    .bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-4 {
+        left: -30px;
+        right: auto;
+    }
+
+
 }
 
 
@@ -164,6 +171,8 @@
     .content-app__footer {
         right: 120px;
         top: 560px;
+        font-size: 12px;
+
     }
 
     .content-app__info__right-side__title {
@@ -176,9 +185,6 @@
         font-size: 19px;
     }
 
-    .content-app__footer {
-        font-size: 12px;
-    }
 
     .content-battery__left-side__content__desc {
         font-size: 72px;
@@ -383,7 +389,92 @@
         right: 10px;
     }
 
+    .bottom-content .content-buy .content-buy__header {
+        font-size: 48px;
+        max-width: 487px;
+        margin-top: 51px;
+        line-height: 52px;
+    }
 
+    .bottom-content .content-buy .content-buy__compare-link {
+        margin-top: 22px;
+        margin-bottom: 37px;
+    }
+
+    .bottom-content .content-buy .content-buy__list .grid-system .product-img {
+        width: 129px;
+        height: 88px;
+    }
+
+    .bottom-content .content-buy .content-buy__list .grid-system .product-name {
+        font-size: 21px;
+    }
+
+    .bottom-content .content-buy .content-buy__list .grid-system {
+        grid-column-gap: 35px;
+    }
+
+    .bottom-content .content-buy .content-buy__list .grid-system .product-special-chip {
+        margin-top: -24px;
+    }
+
+    .bottom-content .content-macOs .content-macOs__container .content-macOs__text {
+        font-size: 40px;
+        font-weight: 500;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .content-macOs__header-img>img {
+        width: 166px;
+        height: 22px;
+    }
+
+    .bottom-content .content-relate .content-relate__text .content-relate__text--title {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .content-relate__img-2 {
+        position: absolute;
+        top: -10px;
+        /* right: -40px; */
+        width: 484px;
+        /* height: 275px; */
+    }
+
+    .bottom-content .content-relate .content-relate__img-container {
+        min-height: 250px;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-4 {
+        width: 424px;
+        height: 202px;
+        left: 50%;
+        margin-left: -178px;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-3 {
+        width: 334px;
+        height: 200px;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container-row-2 {
+        height: 202px;
+    }
+
+    .bottom-content .bg-1 {
+        background-image: url("../img/router_education__du950ftxqoqe_medium.jpg");
+    }
+
+    .bottom-content .bg-2 {
+        background-image: url("../img/router_business__btsiu4bv1bte_medium.jpg");
+    }
+
+    .bottom-content .content-relate-bg {
+        background-position-x: -24px;
+        min-height: 550px;
+    }
 
 }
 
@@ -693,8 +784,9 @@
     .content-app__footer {
         right: 0;
         top: 390px;
-        margin: 30px;
+        margin: 15px;
         font-size: 12px;
+        position: sticky;
     }
 
     .content-app__footer>p {
@@ -1000,11 +1092,202 @@
     .bottom-content .ar-container .ar-colornav .colornav-list .colornav-item .text--long {
         margin-left: -38px;
     }
+
+    .bottom-content .content-buy .content-buy__header {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 340px;
+        margin-top: 52px;
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .bottom-content .content-buy .content-buy__compare-link {
+        margin-top: 20px;
+        margin-bottom: 68px;
+    }
+
+    .bottom-content .content-buy .content-buy__compare-link>a {
+        font-size: 19px;
+
+    }
+
+    .bottom-content .content-buy .content-buy__list .grid-system .product-img {
+        width: 117px;
+        height: 82px;
+    }
+
+    .product-img-grid-3,
+    .product-img-grid-4 {
+        margin-top: 56px;
+    }
+
+    .bottom-content .content-buy .content-buy__list .grid-system .product-name {
+        font-size: 19px;
+        line-height: 23px;
+    }
+
+    .bottom-content .content-buy .content-buy__list .grid-system {
+        padding: 0;
+        width: 87.5%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "mba1-img mba2-img"
+            "mba1-color mba2-color"
+            "mba1-name mba2-name"
+            "mba1-special mba2-special"
+            "mba1-price mba2-price"
+            "mba1-display mba2-display"
+            "mba1-cpu mba2-cpu"
+            "mba1-desc mba2-desc"
+            "mba1-btn mba2-btn"
+            "mba1-more mba2-more"
+            ". ."
+            "mba13-img mba14-img"
+            "mba13-color mba14-color"
+            "mba13-name mba14-name"
+            "mba13-special mba14-special"
+            "mba13-price mba14-price"
+            "mba13-display mba14-display"
+            "mba13-cpu mba14-cpu"
+            "mba13-desc mba14-desc"
+            "mba13-btn mba14-btn"
+            "mba13-more mba14-more";
+
+
+
+    }
+
+    .bottom-content .content-buy .content-buy__list .grid-system {
+        grid-column-gap: 28px;
+        grid-row-gap: 0px;
+    }
+
+    .bottom-content .content-buy .content-buy__list .grid-system .product-special-chip {
+        margin-top: 0;
+    }
+
+    .bottom-content .content-macOs {
+        background-image: url("../img/router_macos_monterey__fz47xuao5tiu_small.jpg");
+        background-size: cover;
+    }
+
+    .content-macOs__header-img>img {
+        width: 166px;
+        height: 22px;
+    }
+
+    .bottom-content .content-macOs .content-macOs__container .content-macOs__text {
+        font-size: 32px;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    .bottom-content .content-macOs .content-macOs__container {
+        margin-top: 0;
+    }
+
+    .bottom-content .content-relate .content-relate__text .content-relate__text--intro {
+        font-size: 19px;
+    }
+
+    .bottom-content .content-relate .content-relate__text .content-relate__text--title {
+        font-size: 32px;
+        line-height: 37px;
+
+    }
+
+    .bottom-content .content-relate .content-relate__img-container .content-relate__img-1 {
+        display: none;
+        margin-top: 0;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container .content-relate__img-2 {
+        display: none;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-3 {
+        display: none;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-4 {
+        display: none;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container {
+        min-height: 250px;
+        height: fit-content;
+        margin-top: auto;
+    }
+
+    .bottom-content .first-row {
+        min-height: 500px;
+    }
+
+
+    .bottom-content .content-relate .content-relate__img-container .content-relate__img-1-mobile {
+        width: 400px;
+        height: 242px;
+        display: block;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container .content-relate__img-2-mobile {
+        width: 400px;
+        height: 420px;
+        display: block;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-3-mobile {
+        width: 302px;
+        height: 200px;
+        display: block;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container-row-2 .content-relate__img-4-mobile {
+        width: 376px;
+        height: 210px;
+        display: block;
+        top: 16px;
+        right: auto;
+    }
+
+    .bottom-content .content-relate .img-container-2 {
+        min-height: 450px;
+    }
+
+    .bottom-content .content-relate .content-relate__img-container-row-2 {
+        height: 226px;
+    }
+
+    .bottom-content .bg-1 {
+        background-image: url("../img/router_education__du950ftxqoqe_medium.jpg");
+    }
+
+    .bottom-content .bg-2 {
+        background-image: url("../img/router_business__btsiu4bv1bte_medium.jpg");
+    }
+
+    .bottom-content .content-relate-bg {
+        background-position-x: -30px;
+        min-height: 500px;
+    }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 370px) {
     .margin-tag {
         overflow: hidden;
         margin: 0;
     }
+
+    .content-tag-item {
+        border-radius: 0;
+    }
+
+    .content-tag-item--grey-bg,
+    .content-tag,
+    .content-hardware__rigth-side,
+    .content-performance {
+        border-radius: 0;
+    }
+
 }

@@ -65,9 +65,12 @@
 .content-bottom-bg {
     background-color: var(--bottom-content-container-tag-color);
 }
+.content-space-between {
+    justify-content: space-between;
+}
 
 .content-tag-item--grey-bg {
-    margin-top: 30px;
+    // margin-top: 30px;
     display: flex;
     // flex-direction: row;
     position: relative;
@@ -261,6 +264,10 @@ a {
 * {
     box-sizing: inherit;
     /*kế thừa thằng cha  */
+}
+.content-fit-height {
+    height: 100%;
+    margin-top: 0;
 }
 
 p {
@@ -1791,6 +1798,7 @@ html {
                     "mba1-more mba2-more mba13-more mba14-more";
                 flex-direction: column;
                 align-items: flex-start;
+                margin: 0 auto;
 
                 .product-img-grid-1 {
                     grid-area: mba1-img;
@@ -1938,7 +1946,7 @@ html {
                 .product-new::before {
                     content: "New";
                     font-size: 12px;
-                    color: #bf8400;
+                    color: #bf4800;
                     position: absolute;
                     top: -14px;
                     font-weight: 300;
@@ -1946,7 +1954,7 @@ html {
                 }
                 .product-special-chip {
                     font-weight: 400;
-                    margin-top: -28px;
+                    margin-top: -30px;
                     margin-bottom: 11px;
                 }
                 .product-price {
@@ -1989,7 +1997,7 @@ html {
     // content macOs
     .content-macOs {
         background-image: url("../img/router_macos_monterey__fz47xuao5tiu_large.jpg");
-        height: 600px;
+        max-height: 600px;
 
         .content-macOs__container {
             margin-top: 36px;
@@ -2012,6 +2020,7 @@ html {
             }
             .content-macOs__more:hover {
                 text-decoration: underline;
+                color: #fff;
             }
         }
     }
@@ -2056,39 +2065,69 @@ html {
                 margin-top: 12px;
             }
         }
+        .content-relate__img-container-row-2 {
+            position: relative;
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            height: 254px;
+
+            .content-relate__img-3 {
+                position: absolute;
+                top: 0;
+                width: 464px;
+                height: 252px;
+            }
+
+            .content-relate__img-3-mobile {
+                display: none;
+            }
+
+            .content-relate__img-4 {
+                position: absolute;
+                top: 0px;
+                right: -42px;
+                left: auto;
+                width: 564px;
+                height: 260px;
+            }
+
+            .content-relate__img-4-mobile {
+                display: none;
+            }
+        }
         .content-relate__img-container {
             position: relative;
             margin-top: 40px;
             display: flex;
             justify-content: center;
+            min-height: 345px;
 
             .content-relate__img-1 {
                 position: absolute;
-                left: -40px;
-                margin-top: 40px;
+                margin-top: -40px;
+            }
+            .content-relate__img-1-mobile {
+                display: none;
             }
             .content-relate__img-2 {
                 position: absolute;
                 top: -10px;
-                right: -40px;
+                // right: -40px;
             }
-            .content-relate__img-3 {
-                position: absolute;
-                top: 0;
-            }
-            .content-relate__img-4 {
-                position: absolute;
-                top: 0;
-                right: -30px;
+            .content-relate__img-2-mobile {
+                display: none;
             }
         }
     }
     .first-row {
         min-height: 680px;
+        height: 100%;
     }
     .content-relate-bg {
         background-repeat: no-repeat;
         background-size: cover;
+        margin-top: 0;
 
         .content-relate__text {
             .content-relate__text--desc {
