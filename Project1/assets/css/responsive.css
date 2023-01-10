@@ -1500,6 +1500,12 @@
         animation: none;
     }
 
+    .header__side-menu {
+        /* display: block; */
+        z-index: 1999;
+
+    }
+
 
 }
 

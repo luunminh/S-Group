@@ -203,8 +203,9 @@ function main() {
         });
     });
 
+    // cart
     const cartElement = document.querySelector(".header-cart");
-    cartElement.addEventListener("click", () => {
+    cartElement.addEventListener("click", function handleCardEvent() {
         const checkBoxCart = document.querySelector(".cart-checkbox");
         if (checkBoxCart.checked === true) {
             document.querySelector(".cart-container").style.display = "block";
@@ -260,6 +261,32 @@ function main() {
         document.body.style.overflow = "unset";
         document.querySelector(".search-checkbox").checked =
             !document.querySelector(".search-checkbox").checked;
+    });
+
+    // side menu mobile event
+    const menuMobileElement = document.querySelector(".menu-btn");
+    menuMobileElement.addEventListener("click", () => {
+        const checkBoxMenu = document.querySelector(".menu-checkbox");
+        if (checkBoxMenu.checked) {
+            document.querySelector(".header__side-menu").style.display =
+                "block";
+            document.body.style.overflow = "hidden";
+            document.querySelector(".header-cart").style.opacity = "0";
+            document.querySelector(".cart-container").opacity = "0";
+            document.querySelector(".header-cart").style.visibility = "hidden";
+            document.querySelector(".menu-mobile-icon").style.display = "none";
+            document.querySelector(".cancel-menu-icon").style.display = "block";
+        } else if (checkBoxMenu.checked === false) {
+            document.querySelector(".header__side-menu").style.display = "none";
+            document.body.style.overflow = "unset";
+            document.querySelector(".header-cart").style.opacity = "1";
+            document.querySelector(".header-cart").style.visibility = "visible";
+            document.querySelector(".menu-mobile-icon").style.display = "block";
+            document.querySelector(".cancel-menu-icon").style.display = "none";
+            document
+                .querySelector(".menu-mobile-icon")
+                .classList.add("rotate-icon-animation");
+        }
     });
 }
 main();
