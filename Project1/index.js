@@ -212,5 +212,54 @@ function main() {
             document.querySelector(".cart-container").style.display = "none";
         }
     });
+    const searchBtnElement = document.querySelector(".search-btn");
+    searchBtnElement.addEventListener("click", () => {
+        const checkBoxSearch = document.querySelector(".search-checkbox");
+        if (checkBoxSearch.checked) {
+            document.querySelector(".modal").style.display = "block";
+            document.body.style.overflow = "hidden";
+            document
+                .querySelector(".first-header__navbar")
+                .classList.add("header-hide-animation");
+            document
+                .querySelector(".first-header__navbar")
+                .classList.remove("header-appear-animation");
+            document.querySelector(".search-input").focus();
+        } else if (checkBoxSearch.checked === false) {
+            document.querySelector(".modal").style.display = "none";
+            document.body.style.overflow = "unset";
+            document
+                .querySelector(".first-header__navbar")
+                .classList.remove("header-hide-animation");
+        }
+    });
+
+    // const modalElement = document.querySelector(".modal");
+    // modalElement.addEventListener("click", () => {
+    //     modalElement.style.display = "none";
+    //     document
+    //         .querySelector(".first-header__navbar")
+    //         .classList.remove("header-hide-animation");
+    //     document
+    //         .querySelector(".first-header__navbar")
+    //         .classList.add("header-appear-animation");
+    //     document.body.style.overflow = "unset";
+    //     document.querySelector(".search-checkbox").checked =
+    //         !document.querySelector(".search-checkbox").checked;
+    // });
+
+    const cancelBtn = document.querySelector(".search-cancel");
+    cancelBtn.addEventListener("click", () => {
+        document.querySelector(".modal").style.display = "none";
+        document
+            .querySelector(".first-header__navbar")
+            .classList.remove("header-hide-animation");
+        document
+            .querySelector(".first-header__navbar")
+            .classList.add("header-appear-animation");
+        document.body.style.overflow = "unset";
+        document.querySelector(".search-checkbox").checked =
+            !document.querySelector(".search-checkbox").checked;
+    });
 }
 main();

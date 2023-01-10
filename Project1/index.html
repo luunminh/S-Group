@@ -66,7 +66,8 @@
                         <div class="first-header__navbar__item">
                             <span>Support</span>
                         </div>
-                        <div class="first-header__navbar__item">
+                        <div class="first-header__navbar__item search-btn">
+                            <input type="checkbox" class="search-checkbox">
                             <iconify-icon icon="heroicons-outline:search"
                                 class="first-header__navbar__item__icon search-icon">
                             </iconify-icon>
@@ -2795,7 +2796,32 @@
         </div>
     </div>
     <div class="modal">
+        <div class="search-box">
+            <div class="search-bar">
+                <div class="search-btn-modal">
+                    <iconify-icon icon="heroicons-outline:search" class="search-icon-modal">
+                    </iconify-icon>
+                </div>
+                <input type="text" class="search-input" placeholder="Search apple.com">
+                <div class="search-cancel">
+                    <iconify-icon icon="iconoir:cancel" class="search__cancel-btn-icon">
+                    </iconify-icon>
+                </div>
+            </div>
+            <div class="search-result">
+                <div class="search-result-container">
+                    <h3 class="search-result-title">quick links</h3>
+                    <ul class="search-result-list">
+                        <li class="search-result-item">Lunar New Year Gifts</li>
+                        <li class="search-result-item">Visiting an Apple Store FAQ</li>
+                        <li class="search-result-item">Apple Gift Card</li>
+                        <li class="search-result-item">AirPods</li>
+                        <li class="search-result-item">AirTag</li>
+                    </ul>
+                </div>
 
+            </div>
+        </div>
     </div>
     <script>
         new WOW().init();
