@@ -276,8 +276,17 @@ function main() {
             document.querySelector(".header-cart").style.visibility = "hidden";
             document.querySelector(".menu-mobile-icon").style.display = "none";
             document.querySelector(".cancel-menu-icon").style.display = "block";
+            document
+                .querySelector(".header__side-menu")
+                .classList.remove("side-menu-hide");
+            document
+                .querySelector(".header__side-menu")
+                .classList.add("sideMenuAppear-animation");
         } else if (checkBoxMenu.checked === false) {
-            document.querySelector(".header__side-menu").style.display = "none";
+            document
+                .querySelector(".header__side-menu")
+                .classList.add("side-menu-hide");
+            // document.querySelector(".header__side-menu").style.display = "none";
             document.body.style.overflow = "unset";
             document.querySelector(".header-cart").style.opacity = "1";
             document.querySelector(".header-cart").style.visibility = "visible";
@@ -286,6 +295,9 @@ function main() {
             document
                 .querySelector(".menu-mobile-icon")
                 .classList.add("rotate-icon-animation");
+            document
+                .querySelector(".header__side-menu")
+                .classList.remove("sideMenuAppear-animation");
         }
     });
 }
