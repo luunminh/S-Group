@@ -2147,7 +2147,9 @@ html {
 }
 
 // footer
-.footer {
+.footer,
+.footer-mobile,
+.footer-tablet {
     background-color: var(--bottom-content-container-tag-color);
     // buy-strip footer
 
@@ -2156,6 +2158,7 @@ html {
         flex-direction: row;
         flex-wrap: wrap;
         padding-bottom: 56px;
+        justify-content: center;
         border-bottom: 1px solid var(--footer-border-color);
         .buy-strip__content {
             flex: 1 25%;
@@ -2170,7 +2173,7 @@ html {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                max-width: 216px;
+                width: 280px;
 
                 .buy-strip__icon {
                     padding-top: 56px;
@@ -2353,6 +2356,12 @@ html {
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    display: none;
+}
+.footer-mobile {
+    display: none;
+}
+.footer-tablet {
     display: none;
 }
 

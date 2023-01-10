@@ -188,5 +188,19 @@ function main() {
     menuFirstHeaderTag.onclick = () => {
         console.log(menuFirstHeaderTag);
     };
+
+    // footer sub menu event
+    const directoryItems = document.querySelectorAll(
+        ".footer__directory__item"
+    );
+
+    directoryItems.forEach((directoryItem, index) => {
+        directoryItem.addEventListener("click", () => {
+            const checkBoxTag = document.querySelectorAll(
+                ".directory-item-check"
+            );
+            checkBoxTag[index].checked = !checkBoxTag[index].checked;
+        });
+    });
 }
 main();
