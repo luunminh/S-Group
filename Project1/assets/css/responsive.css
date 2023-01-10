@@ -1484,7 +1484,7 @@
 @keyframes footerSlideIn {
     from {
         height: 0;
-        transform: translateY(-100px);
+        transform: translateY(-69px);
         opacity: 0;
     }
 
