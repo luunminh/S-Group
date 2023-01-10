@@ -2496,8 +2496,8 @@ html {
   background-color: transparent;
   color: #86868b;
   align-items: center;
-  -webkit-animation: searchInput-appear 1 s ease-in-out forwards;
-          animation: searchInput-appear 1 s ease-in-out forwards;
+  -webkit-animation: searchInputAppear 1s ease-in-out forwards;
+          animation: searchInputAppear 1s ease-in-out forwards;
 }
 
 .search-btn-modal,
@@ -2560,8 +2560,8 @@ html {
   border-top-color: rgb(210, 210, 215);
   margin: 0 40px;
   padding: 23px 0 18px;
-  -webkit-animation: searchInput-appear 0.5s ease-in-out forwards;
-          animation: searchInput-appear 0.5s ease-in-out forwards;
+  -webkit-animation: searchInputAppear 0.5s ease-in-out forwards;
+          animation: searchInputAppear 0.5s ease-in-out forwards;
 }
 
 .search-result-title {
@@ -2763,7 +2763,7 @@ html {
     opacity: 1;
   }
 }
-@-webkit-keyframes searchInput-appear {
+@-webkit-keyframes searchInputAppear {
   from {
     transform: translateX(40px);
     opacity: 0;
@@ -2774,7 +2774,7 @@ html {
     opacity: 1;
   }
 }
-@keyframes searchInput-appear {
+@keyframes searchInputAppear {
   from {
     transform: translateX(40px);
     opacity: 0;
