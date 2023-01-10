@@ -343,8 +343,7 @@ html {
 .first-header__navbar__item {
     display: block;
 }
-
-.cart-container {
+.cart-container-pc {
     display: none;
     background-color: #fff;
     border-radius: 20px;
@@ -358,10 +357,40 @@ html {
     padding: 0 20px;
     letter-spacing: 0.014rem;
 }
+.cart-container-pc::before {
+    content: "";
+    position: absolute;
+    border-width: 20px;
+    top: -25px;
+    left: 44%;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+.cart-container {
+    // display: none;
+    // background-color: #fff;
+    // border-radius: 20px;
+    // min-width: 286px;
+    // height: 323px;
+    // top: 50px;
+    // z-index: 10000000;
+    // position: absolute;
+    // right: 50px;
+    // margin: 0 auto;
+    // padding: 0 20px;
+    // letter-spacing: 0.014rem;
+    height: 0;
+    overflow: hidden;
+}
+.cart-container-mobile {
+    display: none;
+}
 .cart-checkbox {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    margin: 0;
+    padding: 4px;
+    width: 26px;
+    height: 26px;
     top: 2px;
     left: 2px;
     opacity: 0;
@@ -370,17 +399,35 @@ html {
 .cart-checkbox:checked ~ .cart-container {
     display: block;
 }
+.cart-checkbox:checked ~ .cart-container-pc {
+    display: block;
+}
 .cart-checkbox:checked ~ .cart-main-icon {
     color: #fff;
 }
+.cart-checkbox:checked ~ .cart-main-icon::after {
+    color: #fff;
+    display: block;
+}
 .cart-container::before {
-    content: "";
-    position: absolute;
-    border-width: 20px;
-    top: -25px;
-    left: 44%;
-    border-style: solid;
-    border-color: transparent transparent #fff transparent;
+    // content: "";
+    // position: absolute;
+    // border-width: 20px;
+    // top: -28px;
+    // right: 4.5%;
+    // border-style: solid;
+    // border-color: transparent transparent #fff transparent;
+}
+
+.cart-main-icon::after {
+    // content: "";
+    // position: absolute;
+    // border-width: 20px;
+    // top: 14px;
+    // right: 0;
+    // border-style: solid;
+    // border-color: transparent transparent #fff transparent;
+    // display: none;
 }
 .cart-status {
     padding: 35px 0 23px;

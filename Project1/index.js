@@ -202,5 +202,15 @@ function main() {
             checkBoxTag[index].checked = !checkBoxTag[index].checked;
         });
     });
+
+    const cartElement = document.querySelector(".header-cart");
+    cartElement.addEventListener("click", () => {
+        const checkBoxCart = document.querySelector(".cart-checkbox");
+        if (checkBoxCart.checked === true) {
+            document.querySelector(".cart-container").style.display = "block";
+        } else if (checkBoxCart.checked === false) {
+            document.querySelector(".cart-container").style.display = "none";
+        }
+    });
 }
 main();
