@@ -462,11 +462,14 @@ html {
     border-top: 1px solid #d2d2d7;
 }
 .cart-nav-item__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
     width: 20px;
 }
 .cart-nav-icon {
-    margin-top: 14px;
+    // margin-top: 14px;
     margin-right: 2px;
 }
 .cart-nav-item__title {
