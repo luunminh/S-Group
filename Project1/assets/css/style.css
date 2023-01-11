@@ -2686,12 +2686,10 @@ html {
   background-color: #000;
   display: flex;
   align-items: center;
-  visibility: hidden;
   height: 100%;
   top: 0px;
   cursor: pointer;
-  -webkit-animation: cancelAppear 0.6s ease-in-out forwards;
-          animation: cancelAppear 0.6s ease-in-out forwards;
+  visibility: hidden;
 }
 
 .search-input-mobile:focus {

@@ -304,11 +304,14 @@ function main() {
         const searchInputTag = document.querySelector(".search-input-mobile");
         searchInputTag.addEventListener("focus", () => {
             console.log(searchInputTag);
-            document.querySelector(".side-menu__btn-cancel").style.visibility =
-                "visible";
+            // document.querySelector(".side-menu__btn-cancel").style.visibility =
+            //     "visible";
             document
                 .querySelector(".side-menu__btn-cancel")
                 .classList.remove("cancel-hidden");
+            document
+                .querySelector(".side-menu__btn-cancel")
+                .classList.add("cancel-appear");
             document.querySelector(".side-menu-search-wrap").style.background =
                 "none";
             document
@@ -339,6 +342,10 @@ function main() {
             document
                 .querySelector(".side-menu__btn-cancel")
                 .classList.add("cancel-hidden");
+
+            document
+                .querySelector(".side-menu__btn-cancel")
+                .classList.remove("cancel-appear");
 
             document
                 .querySelector(".side-menu__list")

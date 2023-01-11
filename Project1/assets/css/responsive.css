@@ -1328,6 +1328,7 @@
         align-items: center;
         font-weight: 300;
         z-index: 5;
+        position: relative;
 
     }
 
@@ -1346,8 +1347,9 @@
         margin: 5px 0;
         padding: 0;
         position: relative;
-        z-index: 0;
+        z-index: -1;
         height: 0px;
+
     }
 
     .footer__directory-sub__item {
@@ -1524,7 +1526,7 @@
     .footer .footer__nav-breadcrumbs .footer__nav-breadcrumbs__list .footer__nav-breadcrumbs__item,
     .footer-mobile .footer__nav-breadcrumbs .footer__nav-breadcrumbs__list .footer__nav-breadcrumbs__first-item,
     .footer-mobile .footer__nav-breadcrumbs .footer__nav-breadcrumbs__list .footer__nav-breadcrumbs__item {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
