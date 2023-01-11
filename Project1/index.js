@@ -299,6 +299,64 @@ function main() {
                 .querySelector(".header__side-menu")
                 .classList.remove("sideMenuAppear-animation");
         }
+
+        // search focus
+        const searchInputTag = document.querySelector(".search-input-mobile");
+        searchInputTag.addEventListener("focus", () => {
+            console.log(searchInputTag);
+            document.querySelector(".side-menu__btn-cancel").style.visibility =
+                "visible";
+            document
+                .querySelector(".side-menu__btn-cancel")
+                .classList.remove("cancel-hidden");
+            document.querySelector(".side-menu-search-wrap").style.background =
+                "none";
+            document
+                .querySelector(".side-menu__list")
+                .classList.remove("appear-list-side-menu-animation");
+            document
+                .querySelector(".side-menu__list")
+                .classList.add("hide-list-side-menu-animation");
+
+            document
+                .querySelector(".search-list")
+                .classList.remove("search-list-hidden");
+            document
+                .querySelector(".search-list")
+                .classList.add("search-list-appear");
+            document.querySelector(".header__side-menu").style.zIndex =
+                "100000";
+            document.querySelector(".header__side-menu").style.transform =
+                "translateY(-31px)";
+        });
+
+        const cancelSearchTag = document.querySelector(
+            ".side-menu__btn-cancel"
+        );
+        cancelSearchTag.addEventListener("click", () => {
+            document.querySelector(".side-menu-search-wrap").style.background =
+                "#1d1d1f";
+            document
+                .querySelector(".side-menu__btn-cancel")
+                .classList.add("cancel-hidden");
+
+            document
+                .querySelector(".side-menu__list")
+                .classList.remove("hide-list-side-menu-animation");
+            document
+                .querySelector(".side-menu__list")
+                .classList.add("appear-list-side-menu-animation");
+
+            document
+                .querySelector(".search-list")
+                .classList.remove("search-list-appear");
+            document
+                .querySelector(".search-list")
+                .classList.add("search-list-hidden");
+            document.querySelector(".header__side-menu").style.zIndex = "1999";
+            document.querySelector(".header__side-menu").style.transform =
+                "translateY(0)";
+        });
     });
 }
 main();
