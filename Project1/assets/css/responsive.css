@@ -1570,6 +1570,14 @@
         border-radius: 0;
     }
 
+    .content-battery__right-side__header {
+        border-radius: 0;
+    }
+
+    .content-battery__right-side {
+        border-radius: 0;
+    }
+
 }
 
 
