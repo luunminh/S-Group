@@ -1530,6 +1530,29 @@
     }
 }
 
+@media (min-width: 740px) {
+    .header__side-menu {
+        display: none !important;
+    }
+
+    .header-cart {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .fix-header__menu {
+        display: none !important;
+    }
+
+    .fix-header {
+        height: 53px !important;
+    }
+
+    .fix-header-checkBox {
+        display: none !important;
+    }
+}
+
 @media(max-width: 370px) {
     .margin-tag {
         overflow: hidden;

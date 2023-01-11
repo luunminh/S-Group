@@ -1,7 +1,7 @@
 :root {
     --primary-color: #151516;
     --grey-color: #86868b;
-    --fix-header-color: rgba(29, 29, 31, 0.72);
+    --fix-header-color: rgba(29, 29, 31, 0.9);
     --white-color: #fff;
     --black-color: #000;
     --blue-color: #0071e3;
@@ -391,7 +391,8 @@ html {
 }
 .cart-checkbox,
 .search-checkbox,
-.menu-checkbox {
+.menu-checkbox,
+.fix-header-checkBox {
     position: absolute;
     margin: 0;
     padding: 4px;
@@ -402,6 +403,9 @@ html {
     opacity: 0;
     cursor: pointer;
     z-index: 2;
+}
+.fix-header-checkBox {
+    left: auto;
 }
 
 .cart-checkbox:checked ~ .cart-container {
@@ -500,13 +504,20 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    height: 52px;
-    background-color: rgba(29, 29, 31, 0.72);
+    min-height: 52px;
+    // background-color: rgba(29, 29, 31, 0.72);
+    background-color: rgba(29, 29, 31, 0.9);
     border-bottom: 1px solid rgba(255, 255, 255, 0.239);
     z-index: 1000;
     padding: 0;
     margin: 0;
     backdrop-filter: blur(9.6px);
+    overflow: hidden;
+}
+.fix-header__wrap {
+    width: 100%;
+    padding: 0 22px;
+    // height: 52px;
 }
 
 .fix-header__container {
@@ -515,7 +526,35 @@ html {
     justify-content: space-between;
     align-items: center;
     height: 52px;
-    padding: 0 22px;
+    position: relative;
+    z-index: 10;
+    // background-color: rgb(26, 26, 28, 0.9);
+    background-color: transparent;
+}
+.fix-header__bg {
+    background-color: rgba(29, 29, 31, 1) !important;
+}
+.height-animation {
+    animation: animationHeight 0.3s ease-in forwards;
+}
+.height-animation-reverse {
+    animation: animationHeightReverse 0.5s ease-in forwards;
+}
+@keyframes animationHeight {
+    from {
+        height: 52px;
+    }
+    to {
+        height: 214px;
+    }
+}
+@keyframes animationHeightReverse {
+    from {
+        height: 214px;
+    }
+    to {
+        height: 52px;
+    }
 }
 
 .fix-header__left {
@@ -533,7 +572,7 @@ html {
 
 .active {
     cursor: pointer;
-    color: var(--white-color);
+    color: var(--footer-link-color);
 }
 
 .active:hover {
@@ -546,6 +585,14 @@ html {
 .fix-header__right__item-mobile {
     display: none;
 }
+.fix-header-btn {
+    transition-duration: 0.5s;
+
+    cursor: pointer;
+}
+.fix-header-btn:hover > .fix-header-menu-icon {
+    color: #fff;
+}
 .fix-header__right__item {
     display: block;
 }
@@ -554,6 +601,64 @@ html {
 .fix-header__right__item-mobile {
     font-size: 12px;
     margin: 0 10px;
+}
+
+.fix-header__menu {
+    margin: 0;
+    padding: 4px 24px 24px;
+    // transform: translate3d(0, 0, 0);
+    // transition-property: all;
+    // transition-delay: 0.2s, 0.4s;
+    z-index: 0;
+    display: none;
+}
+@keyframes fixHeaderAnimation {
+    from {
+        display: none;
+        opacity: 0;
+        transform: translate3d(0, -150px, 0);
+        transition-delay: 0.2s, 0.4s;
+    }
+    to {
+        transition-property: all;
+        display: block;
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition-delay: 0.2s, 0.4s;
+    }
+}
+
+@keyframes fixHeaderHideAnimation {
+    from {
+        transition-property: all;
+        display: block;
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition-delay: 0.2s, 0.4s;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        transform: translate3d(0, -150px, 0);
+        transition-delay: 0.2s, 0.4s;
+    }
+}
+.fix-header__menu-animation {
+    display: block;
+    animation: fixHeaderAnimation 0.8s ease-in-out forwards;
+}
+.fix-header__menu-hide-animation {
+    display: block;
+    animation: fixHeaderHideAnimation 0.4s ease-in-out forwards;
+}
+.fix-header__menu-item {
+    margin: 0;
+    line-height: 44px;
+    font-size: 14px;
+    letter-spacing: 0.0012rem;
+}
+.border-bottom-fix-menu {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.428571);
 }
 
 .btn {
@@ -2487,7 +2592,8 @@ html {
     display: none;
 }
 
-.modal {
+.modal,
+.modal-mobile {
     position: fixed;
     top: 0;
     right: 0;
@@ -2499,6 +2605,9 @@ html {
     z-index: 10000;
     display: none;
     animation: modalAppear 1s ease-in-out forwards;
+}
+.modal-mobile {
+    z-index: 20;
 }
 
 .header__side-menu {
@@ -2628,6 +2737,8 @@ html {
 }
 .search-logo-side-menu {
     padding: 9.5px 7px;
+    position: relative;
+    top: 0.1px;
     display: flex;
     align-items: center;
     background: #1d1d1f;
@@ -2891,7 +3002,7 @@ html {
         top: -1000px;
         height: 1000px;
         bottom: unset;
-        opacity: 0.7;
+        opacity: 0;
     }
     to {
         top: 40px;
@@ -3038,6 +3149,46 @@ html {
 }
 .search-list-hidden {
     animation: searchListHidden 0.4s ease-in-out forwards;
+}
+
+@keyframes rotateFixHeaderBtn {
+    0% {
+        // opacity: 0;
+        transform: rotate3d(0, 0, 0, -90deg);
+    }
+    50% {
+        scale: 1.7;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1.1;
+        transform: rotate3d(1, 0, 0, 180deg);
+    }
+}
+
+@keyframes rotateFixHeaderBtnReverse {
+    0% {
+        // opacity: 0;
+        transform: rotate3d(1, 0, 0, 180deg);
+    }
+    50% {
+        scale: 1.7;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1.1;
+        transform: rotate3d(0, 0, 0, -90deg);
+    }
+}
+
+.rotate-fix-header-animation {
+    animation: rotateFixHeaderBtn 0.8s linear forwards;
+}
+
+.rotate-fix-header-animation-reverse {
+    animation: rotateFixHeaderBtnReverse 0.8s linear forwards;
 }
 
 /* .app-content-container : căn chiều dọc giữa item */

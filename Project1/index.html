@@ -208,32 +208,45 @@
             </div>
             <div class="fix-header">
                 <div class="grid wide">
-                    <div class="fix-header__container">
-                        <div class="fix-header__left">
-                            <a href="">MacBook Pro 13"</a>
-                        </div>
-                        <div class="fix-header__right">
-                            <div class="fix-header__right__item-container">
-                                <div class="fix-header__right__item no-active">
-                                    Overview
-                                </div>
-                                <div class="fix-header__right__item active">
-                                    Why Mac
-                                </div>
-                                <div class="fix-header__right__item active">
-                                    Tech Specs
-                                </div>
+                    <div class="fix-header__wrap">
+                        <div class="fix-header__container">
+                            <div class="fix-header__left">
+                                <a href="">MacBook Pro 13"</a>
                             </div>
-                            <div class="fix-header__right__item-mobile ">
-                                <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"
-                                    class="first-header__navbar__item__icon fix-header-menu-icon"></iconify-icon>
+                            <div class="fix-header__right">
+                                <div class="fix-header__right__item-container">
+                                    <div class="fix-header__right__item no-active">
+                                        Overview
+                                    </div>
+                                    <div class="fix-header__right__item active">
+                                        Why Mac
+                                    </div>
+                                    <div class="fix-header__right__item active">
+                                        Tech Specs
+                                    </div>
+                                </div>
+                                <div class="fix-header__right__item-mobile fix-header-btn">
+                                    <input type="checkbox" class="fix-header-checkBox">
 
-                            </div>
-                            <div class="fix-header__right__item-mobile fix-header__right__item btn">
-                                Buy
+                                    <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"
+                                        class="first-header__navbar__item__icon fix-header-menu-icon"></iconify-icon>
+
+                                </div>
+                                <div class="fix-header__right__item-mobile fix-header__right__item btn">
+                                    Buy
+                                </div>
                             </div>
                         </div>
+                        <ul class="fix-header__menu ">
+                            <li
+                                class="fix-header__menu-item border-bottom-fix-menu no-active fix-header__right__item active">
+                                Overview</li>
+                            <li class="fix-header__menu-item border-bottom-fix-menu fix-header__right__item active">Why
+                                Mac</li>
+                            <li class="fix-header__menu-item fix-header__right__item active">Tech Specs</li>
+                        </ul>
                     </div>
+
                 </div>
             </div>
             <div class="advs-header">
@@ -2863,6 +2876,7 @@
             </div>
         </div>
     </div>
+    <div class="modal-mobile" onclick="handleFixHeader()"></div>
     <script>
         new WOW().init();
     </script>

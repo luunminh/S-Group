@@ -102,8 +102,31 @@ function handleChangePassword() {
         }
     }
 }
+
+const handleFixHeader = () => {
+    const checkBoxFixHeader = document.querySelector(".fix-header-checkBox");
+    const fixHeaderBtn = document.querySelector(".fix-header-btn");
+    fixHeaderBtn.classList.remove("rotate-fix-header-animation");
+    fixHeaderBtn.classList.add("rotate-fix-header-animation-reverse");
+
+    const fixHeaderMenuElement = document.querySelector(".fix-header__menu");
+    fixHeaderMenuElement.classList.remove("fix-header__menu-animation");
+    fixHeaderMenuElement.classList.add("fix-header__menu-hide-animation");
+    document.querySelector(".fix-header").classList.remove("height-animation");
+    document
+        .querySelector(".fix-header")
+        .classList.add("height-animation-reverse");
+    document
+        .querySelector(".fix-header__container")
+        .classList.remove("fix-header__bg");
+    document.querySelector(".fix-header").classList.remove("fix-header__bg");
+    document.querySelector(".modal-mobile").style.display = "none";
+    checkBoxFixHeader.checked = false;
+};
+
 window.addEventListener("scroll", handleChangePassword);
 window.addEventListener("scroll", playHardWareVid);
+// window.addEventListener("scroll", handleFixHeader);
 
 //onclick event when change macbook color
 let isGreyColorLap = true;
@@ -186,7 +209,7 @@ function main() {
     const menuFirstHeaderTag = document.querySelector(".menu-btn");
 
     menuFirstHeaderTag.onclick = () => {
-        console.log(menuFirstHeaderTag);
+        // console.log(menuFirstHeaderTag);
     };
 
     // footer sub menu event
@@ -303,7 +326,7 @@ function main() {
         // search focus
         const searchInputTag = document.querySelector(".search-input-mobile");
         searchInputTag.addEventListener("focus", () => {
-            console.log(searchInputTag);
+            // console.log(searchInputTag);
             // document.querySelector(".side-menu__btn-cancel").style.visibility =
             //     "visible";
             document
@@ -364,6 +387,63 @@ function main() {
             document.querySelector(".header__side-menu").style.transform =
                 "translateY(0)";
         });
+    });
+
+    // fix-header-event
+    const fixHeaderBtn = document.querySelector(".fix-header-btn");
+    fixHeaderBtn.addEventListener("click", () => {
+        const checkBoxFixHeader = document.querySelector(
+            ".fix-header-checkBox"
+        );
+        console.log(checkBoxFixHeader.checked);
+        if (checkBoxFixHeader.checked) {
+            fixHeaderBtn.classList.add("rotate-fix-header-animation");
+            fixHeaderBtn.classList.remove(
+                "rotate-fix-header-animation-reverse"
+            );
+            const fixHeaderMenuElement =
+                document.querySelector(".fix-header__menu");
+            fixHeaderMenuElement.classList.add("fix-header__menu-animation");
+            fixHeaderMenuElement.classList.remove(
+                "fix-header__menu-hide-animation"
+            );
+            document
+                .querySelector(".fix-header")
+                .classList.add("fix-header__bg");
+            document
+                .querySelector(".fix-header__container")
+                .classList.add("fix-header__bg");
+            document
+                .querySelector(".fix-header")
+                .classList.add("height-animation");
+            document
+                .querySelector(".fix-header")
+                .classList.remove("height-animation-reverse");
+            document.querySelector(".modal-mobile").style.display = "block";
+        } else if (checkBoxFixHeader.checked === false) {
+            fixHeaderBtn.classList.remove("rotate-fix-header-animation");
+            fixHeaderBtn.classList.add("rotate-fix-header-animation-reverse");
+
+            const fixHeaderMenuElement =
+                document.querySelector(".fix-header__menu");
+            fixHeaderMenuElement.classList.remove("fix-header__menu-animation");
+            fixHeaderMenuElement.classList.add(
+                "fix-header__menu-hide-animation"
+            );
+            document
+                .querySelector(".fix-header")
+                .classList.remove("height-animation");
+            document
+                .querySelector(".fix-header")
+                .classList.add("height-animation-reverse");
+            document
+                .querySelector(".fix-header__container")
+                .classList.remove("fix-header__bg");
+            document
+                .querySelector(".fix-header")
+                .classList.remove("fix-header__bg");
+            document.querySelector(".modal-mobile").style.display = "none";
+        }
     });
 }
 main();
