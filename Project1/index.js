@@ -395,7 +395,7 @@ function main() {
         const checkBoxFixHeader = document.querySelector(
             ".fix-header-checkBox"
         );
-        console.log(checkBoxFixHeader.checked);
+        // console.log(checkBoxFixHeader.checked);
         if (checkBoxFixHeader.checked) {
             fixHeaderBtn.classList.add("rotate-fix-header-animation");
             fixHeaderBtn.classList.remove(
