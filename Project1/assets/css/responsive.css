@@ -1505,7 +1505,11 @@
     .header__side-menu {
         /* display: block; */
         z-index: 1999;
+        display: none;
 
+    }
+
+    .fix-header__menu {
     }
 
 

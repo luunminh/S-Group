@@ -306,6 +306,8 @@ function main() {
                 .querySelector(".header__side-menu")
                 .classList.add("sideMenuAppear-animation");
         } else if (checkBoxMenu.checked === false) {
+            // document.querySelector(".header__side-menu").style.display =
+            //     "none";
             document
                 .querySelector(".header__side-menu")
                 .classList.add("side-menu-hide");
@@ -443,6 +445,31 @@ function main() {
                 .querySelector(".fix-header")
                 .classList.remove("fix-header__bg");
             document.querySelector(".modal-mobile").style.display = "none";
+        }
+    });
+
+    const mediaQuery = window.matchMedia("(min-width:740px)");
+    window.addEventListener("resize", () => {
+        if (mediaQuery.matches) {
+            document
+                .querySelector(".header__side-menu")
+                .classList.remove("side-menu-hide");
+            document
+                .querySelector(".menu-mobile-icon")
+                .classList.remove("rotate-icon-animation");
+
+            // fix header
+            const fixHeaderMenuElement =
+                document.querySelector(".fix-header__menu");
+            fixHeaderMenuElement.classList.remove(
+                "fix-header__menu-hide-animation"
+            );
+            const fixHeaderBtn = document.querySelector(
+                ".fix-header__right__item-mobile"
+            );
+            fixHeaderBtn.classList.remove(
+                "rotate-fix-header-animation-reverse"
+            );
         }
     });
 }
