@@ -37,6 +37,16 @@ const playHardWareVid = () => {
         audioVidElemenet.play();
     }
 };
+let lockPosition = ["-0px -0px","-100px -0px","-200px -0px","-300px -0px","-400px -0px","-500px -0px","-600px -0px","-700px -0px",
+                    "-0px -128px","-100px -128px","-200px -128px","-300px -128px","-400px -128px","-500px -128px","-600px -128px","-700px -128px",
+                    "-0px -256px","-100px -256px","-200px -256px","-300px -256px","-400px -256px","-500px -256px","-600px -256px","-700px -256px",
+                    "-0px -512px","-100px -512px","-200px -512px","-300px -512px","-400px -512px","-500px -512px","-600px -512px","-700px -512px",
+                    "-0px -640px","-100px -640px","-200px -640px","-300px -640px","-400px -640px","-500px -640px","-600px -640px","-700px -640px",
+                    "-0px -768px","-100px -768px","-200px -768px","-300px -768px","-400px -768px","-500px -768px","-600px -768px","-700px -768px",
+                    "-0px -896px","-100px -896px","-200px -896px","-300px -896px","-400px -896px","-500px -896px","-600px -896px","-700px -896px",
+                    "-0px -1024px","-100px -1024px","-200px -1024px","-300px -1024px","-400px -1024px","-500px -1024px","-600px -1024px","-700px -1024px",
+]
+let checkLockStatus = new Array(64).fill(0);
 
 // change lock para
 let passwordArr = [
@@ -56,6 +66,7 @@ let passwordArr = [
 ];
 let textArr = ["S", "e", "c", "u", "r", "e", "l", "y", "y", "o", "u", "r", "s"];
 let prePosition = 0;
+let preLockPosition = 0;
 function handleChangePassword() {
     const lockTag = document.querySelectorAll(".lock-mask");
     const lockTagHeight = lockTag[0].getBoundingClientRect().top;
@@ -103,6 +114,48 @@ function handleChangePassword() {
     }
 }
 
+function handleUnlock() {
+    const lockTag = document.querySelector(".content-security__left-side__lock");
+    const lockTagHeight = lockTag.getBoundingClientRect().top;
+    const screenHeigth = window.innerHeight;
+    // console.log(`locktagHeight ${lockTagHeight}`);
+    if (
+        lockTagHeight <= (screenHeigth * 1.25) / 3 &&
+        // Number.parseInt(lockTagHeight) % 2 == 0 &&
+        lockTagHeight < preLockPosition
+    ) {
+        preLockPosition = lockTagHeight;
+        for (let i = 0; i < lockPosition.length; i++) {
+            if(checkLockStatus[i] == 0 && i!=lockPosition.length && i!=lockPosition.length-1  && i!=lockPosition.length - 2) {
+                checkLockStatus[i] = 1;
+                checkLockStatus[i + 1] = 1;
+                checkLockStatus[i + 2] = 1;
+
+
+                lockTag.style.backgroundPosition  = lockPosition[i + 2];
+                break;
+            }
+        }
+    }
+    if (
+        lockTagHeight > (screenHeigth * 1.25) / 3 &&
+        // Number.parseInt(lockTagHeight) % 2 == 0 &&
+        lockTagHeight > preLockPosition
+    ) {
+        preLockPosition = lockTagHeight;
+        for (let i =  lockPosition.length -1; i >=0; i--) {
+            if(checkLockStatus[i] === 1 && i !=0 && i!= 1 && i!=2 ) {
+                checkLockStatus[i] = 0;
+                checkLockStatus[i - 1] = 0;
+                checkLockStatus[i - 2] = 0;
+
+                lockTag.style.backgroundPosition = lockPosition[i - 3];
+                break;
+            }
+        }
+    }
+}
+
 const handleFixHeader = () => {
     const checkBoxFixHeader = document.querySelector(".fix-header-checkBox");
     const fixHeaderBtn = document.querySelector(".fix-header-btn");
@@ -126,7 +179,7 @@ const handleFixHeader = () => {
 
 window.addEventListener("scroll", handleChangePassword);
 window.addEventListener("scroll", playHardWareVid);
-// window.addEventListener("scroll", handleFixHeader);
+window.addEventListener("scroll", handleUnlock);
 
 //onclick event when change macbook color
 let isGreyColorLap = true;

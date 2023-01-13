@@ -1522,10 +1522,10 @@ html {
     background-size: 800px 1152px;
     width: 100px;
     height: 128px;
-    animation: unlock_animation-large 6s steps(1) forwards;
-    animation-play-state: paused;
-    animation-iteration-count: initial;
-    animation-duration: 72s;
+    // animation: unLock 10s steps(1) forwards;
+    // animation-play-state: paused;
+    // animation-iteration-count: initial;
+    // animation-duration: 72s;
     background-position: 0px 0px;
     animation-delay: -67s;
     margin-left: auto;
@@ -3195,3 +3195,7 @@ html {
 }
 
 /* .app-content-container : căn chiều dọc giữa item */
+@keyframes unLock {
+   
+
+ }

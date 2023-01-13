@@ -1521,14 +1521,6 @@ html {
   background-size: 800px 1152px;
   width: 100px;
   height: 128px;
-  -webkit-animation: unlock_animation-large 6s steps(1) forwards;
-          animation: unlock_animation-large 6s steps(1) forwards;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-  -webkit-animation-duration: 72s;
-          animation-duration: 72s;
   background-position: 0px 0px;
   -webkit-animation-delay: -67s;
           animation-delay: -67s;
@@ -3533,4 +3525,6 @@ html {
           animation: rotateFixHeaderBtnReverse 0.8s linear forwards;
 }
 
-/* .app-content-container : căn chiều dọc giữa item *//*# sourceMappingURL=style.css.map */
+/* .app-content-container : căn chiều dọc giữa item */
+@-webkit-keyframes unLock {}
+@keyframes unLock {}/*# sourceMappingURL=style.css.map */
