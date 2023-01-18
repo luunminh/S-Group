@@ -151,7 +151,6 @@ const handleUpdate = () => {
             item.querySelector('.edit-input').style.display = "block";
             item.querySelector('.edit-input').value = item.querySelector(".span-text").innerText;
             const itemInfo = (item.querySelector(".edit-input").id).split("-");
-            console.log(itemInfo);
             item.querySelector('.edit-input').addEventListener("keypress",(e) => {
                 if(e.key === "Enter") {
                     updateItem(itemInfo[0], item.querySelector('.edit-input').value, itemInfo[1]);
