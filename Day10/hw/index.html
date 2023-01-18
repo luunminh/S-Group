@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <div class="loading">
+        <h2>
+            Loading...
+        </h2>
+    </div>
+    <div class="main">
+        <h1 class="title">Todos</h1>
+        <input type="text" name="" class="input-todo" placeholder="What needs to be done?">
+        <div class="content">
+            <ul class="content-list">
+                <li class="content-item">
+                </li>
+            </ul>
+            <div class="todo-status">
+                <div class="item-left"></div>
+                <div class="status-container">
+                    <div class="status-item">
+                        <input type="radio" value="all" name="radio-status" class="checkbox-status">
+                        <span class="status-title">All</span>
+                    </div>
+                    <div class="status-item">
+                        <input type="radio" name="radio-status" value="active" class="checkbox-status">
+                        <span class="status-title">Active</span>
+                    </div>
+                    <div class="status-item">
+                        <input type="radio" name="radio-status" value="completed" class="checkbox-status">
+                        <span class="status-title">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <p>Double-click to edit a todo</p>
+            <p>Created by Oscar Godson</p>
+            <p>Refractored by Christoph Burgmer</p>
+            <p>Part of TodoMVC</p>
+        </div>
+    </div>
+</body>
+
+</html>
