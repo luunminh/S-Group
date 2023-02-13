@@ -22,7 +22,8 @@ const fetchData = (status = "all") => {
         })
         .then((res) => {
             // console.log(res);
-            main(res, status);
+            todoArr = res;
+            main(status);
         })
         .catch((error) => {
             console.log("error");
@@ -73,7 +74,7 @@ const showAllItems = (arr, showAllCheck) => {
 
 //add
 const addNewItem = (item) => {
-    showLoading();
+    showLoading()
     axios
         .post(
             `https://63c6a3164ebaa802854a2ebe.mockapi.io/api/lnmtodo/todo`,
@@ -81,7 +82,8 @@ const addNewItem = (item) => {
         )
         .then((res) => {
             if (res.status === 201) {
-                fetchData(check);
+                todoArr.push(item)
+                main(check)
                 return;
             }
         });
@@ -137,7 +139,13 @@ const changeStatusItem = (id, job, status) => {
         .then((res) => {
             console.log(res.status);
             if (res.status === 200) {
-                fetchData(check);
+                todoArr = todoArr.map((item) => {
+                    if (item.id === id) {
+                        item.status = status
+                    }
+                    return item;
+                })
+                main(check)
             }
         });
 };
@@ -147,12 +155,12 @@ const changeStatusItem = (id, job, status) => {
 const handleUpdate = () => {
     const items = document.querySelectorAll('.content-item');
     items.forEach((item) => {
-        item.addEventListener('dblclick',() => {
+        item.addEventListener('dblclick', () => {
             item.querySelector('.edit-input').style.display = "block";
             item.querySelector('.edit-input').value = item.querySelector(".span-text").innerText;
             const itemInfo = (item.querySelector(".edit-input").id).split("-");
-            item.querySelector('.edit-input').addEventListener("keypress",(e) => {
-                if(e.key === "Enter") {
+            item.querySelector('.edit-input').addEventListener("keypress", (e) => {
+                if (e.key === "Enter") {
                     updateItem(itemInfo[0], item.querySelector('.edit-input').value, itemInfo[1]);
                     item.querySelector('.edit-input').style.display = "none";
                 }
@@ -161,7 +169,7 @@ const handleUpdate = () => {
         })
     })
 }
-const updateItem = (itemId,job,status) => {
+const updateItem = (itemId, job, status) => {
     showLoading();
     axios
         .put(
@@ -174,12 +182,19 @@ const updateItem = (itemId,job,status) => {
         .then((res) => {
             console.log(res.status);
             if (res.status === 200) {
-                fetchData(check);
+                todoArr = todoArr.map((item) => {
+                    if (item.id === itemId) {
+                        item.job = job;
+                        item.status = status
+                    }
+                    return item;
+                })
+                main(check)
             }
         })
         .catch(error => {
             alert("error")
-        }) ;
+        });
 }
 
 // handle delete event 
@@ -187,33 +202,34 @@ const handleDeleteItem = () => {
     const checkBoxDeleteGroup = document.querySelectorAll(".checkbox-delete");
     checkBoxDeleteGroup.forEach((item) => {
         item.addEventListener("click", () => {
-            if(item.checked) {
+            if (item.checked) {
                 deleteItem(item.value);
             }
         })
     })
-} 
+}
 
 const deleteItem = (itemId) => {
-    console.log(itemId);
+    // console.log(itemId);
     showLoading();
     axios.delete(`https://63c6a3164ebaa802854a2ebe.mockapi.io/api/lnmtodo/todo/${itemId}`)
-    .then((res) => {
-        console.log(res.status);
-        if(res.status === 200) {
-            fetchData(check);
-        }
-    })
-} 
+        .then((res) => {
+            console.log(res.status);
+            if (res.status === 200) {
+                todoArr = todoArr.filter(item => item.id !== itemId)
+                main(check)
+            }
+        })
+}
 
 
 
 let check = "all";
-
-const main = (res, status) => {
+let todoArr = [];
+const main = (status) => {
     try {
         showLoading();
-        const arr = res;
+        const arr = todoArr;
         const [activeItems, completedItems] = filteredItems(arr);
         if (status === "all") {
             showAllItems(arr, true);
@@ -222,7 +238,7 @@ const main = (res, status) => {
         } else {
             showAllItems(completedItems, false);
         }
-    
+
         // filter event
         const radioGroup = document.querySelectorAll(".checkbox-status");
         radioGroup.forEach((item) => {
@@ -239,9 +255,9 @@ const main = (res, status) => {
                 }
             });
         });
-    }catch(error) {
+    } catch (error) {
         alert("loading failed")
-    }finally {
+    } finally {
         hideLoading();
     }
 };
