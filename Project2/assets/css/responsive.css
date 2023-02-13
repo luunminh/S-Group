@@ -1,0 +1,27 @@
+@media (max-width: 1023px) {
+    .header-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add-task-wrap {
+        margin-top: 10px;
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .main {
+        overflow: auto;
+    }
+
+    .content-list {
+        max-height: 30vh;
+    }
+
+    .content>.row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
