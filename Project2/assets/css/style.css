@@ -11,6 +11,23 @@
   --yellow-border: #DAB700;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ababab;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -135,7 +152,7 @@ html {
 .content-line {
   margin-top: 16px;
   width: 100%;
-  height: 1px;
+  height: 2px;
   border-radius: 3px;
 }
 
@@ -156,7 +173,7 @@ html {
   border-radius: 8px;
   padding: 0 23px;
   padding-top: 16px;
-  cursor: pointer;
+  cursor: default;
 }
 .content-item .content-wrap {
   display: flex;
@@ -164,7 +181,7 @@ html {
   margin-bottom: 10px;
 }
 .content-item .content-wrap .content-title-wrap {
-  max-width: 250px;
+  width: 70%;
   padding-bottom: 24px;
   border-bottom: 2px solid #DBDBDB;
 }
