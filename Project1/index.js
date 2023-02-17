@@ -305,6 +305,14 @@ function handleMacColor() {
     }
 }
 
+function handleOpenModalChip() {
+    document.querySelector('.modal-chip').style.display = 'block'
+}
+
+function handleCloseModalChip() {
+    document.querySelector('.modal-chip').style.display = 'none'
+}
+
 function main() {
     const lockTag = document.querySelectorAll(".lock-mask");
     const lockTagHeight = lockTag[0].getBoundingClientRect().top;
@@ -343,12 +351,12 @@ function main() {
     });
 
     // cart
-    document.querySelector(".content").addEventListener("click", () => {
+    // document.querySelector(".content").addEventListener("click", () => {
 
-        document.querySelector(".cart-container").style.display = "none";
-        document.querySelector(".cart-container-pc").style.display = "none";
-        // document.querySelector(".cart-checkbox").checked = false;
-    });
+    //     document.querySelector(".cart-container-pc").style.display = "none";
+    //     document.querySelector(".cart-container").style.display = "none";
+    //     // document.querySelector(".cart-checkbox").checked = false;
+    // });
     const cartElement = document.querySelector(".header-cart");
     cartElement.addEventListener("click", function handleCardEvent() {
         const checkBoxCart = document.querySelector(".cart-checkbox");
@@ -358,7 +366,7 @@ function main() {
             document.querySelector(".cart-container").style.display = "none";
         }
     });
-    
+
 
     const searchBtnElement = document.querySelector(".search-btn");
     searchBtnElement.addEventListener("click", () => {
@@ -381,6 +389,20 @@ function main() {
                 .classList.remove("header-hide-animation");
         }
     });
+    const modalElement = document.querySelector(".modal");
+    modalElement.addEventListener("click", () => {
+        const element = document.querySelector(".search-box");
+        if (element.matches(":hover")) {
+
+        } else {
+            document.querySelector(".modal").style.display = "none";
+            document.body.style.overflow = "unset";
+            document
+                .querySelector(".first-header__navbar")
+                .classList.remove("header-hide-animation");
+            document.querySelector(".search-checkbox").checked = false;
+        }
+    })
 
     // const modalElement = document.querySelector(".modal");
     // modalElement.addEventListener("click", () => {

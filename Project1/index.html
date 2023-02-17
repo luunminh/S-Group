@@ -16,6 +16,7 @@
     <!-- <script src="../node_modules/wow.js/dist/wow.min.js" defer></script> -->
     <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+
     <!-- <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js' defer></script> -->
 </head>
 
@@ -326,7 +327,7 @@
                         </div>
                     </div>
                     <div class="section-content__btn-container">
-                        <div class="section-content__btn">Go inside M2
+                        <div class="section-content__btn" onclick="handleOpenModalChip()">Go inside M2
                             <iconify-icon icon="material-symbols:add-circle-outline" class="btn-icon">
                             </iconify-icon>
                         </div>
@@ -2877,6 +2878,127 @@
         </div>
     </div>
     <div class="modal-mobile" onclick="handleFixHeader()"></div>
+    <div class="modal-chip narg">
+        <div class="modal-content-container">
+            <div class="exit-btn" onclick='handleCloseModalChip()'>X</div>
+            <div class="modal-content">
+                <div class="section-content-chip col l-12 m-12">
+                    <div class="first-section-content-chip">
+                        <div class="title-content-chip">New chip. Next chapter.</div>
+                        <div class="content-chip-desc">
+                            <p>M2 begins the next generation of Apple silicon, which has transformed the Mac lineup with
+                                its
+                                blazing performance and efficiency. The breakthrough system on a chip (SoC) architecture
+                                combines the CPU, GPU, I/O, and more on a single chip so everything runs much faster —
+                                while
+                                requiring much less power. </p>
+                            <p>M2 is built using an enhanced second-generation 5‑nanometer technology. It features over
+                                20
+                                billion transistors — 25 percent more than M1. And its 16-core Neural Engine is capable
+                                of
+                                executing up to 15.8 trillion operations per second to accelerate machine learning
+                                tasks. Up
+                                to 24GB of high-performance unified memory gives the CPU and GPU shared access to a
+                                larger
+                                memory pool. And the 100GB/s memory bandwidth — 50 percent more than M1 — makes
+                                multitasking
+                                and running multiple apps superfluid.</p>
+                        </div>
+                    </div>
+
+                    <div class="chip-heading">
+                        M2 chip
+                    </div>
+                    <div class="m2-chip-wrap">
+                        <div class="col l-6 m-12">
+                            <div class="img-power"></div>
+                        </div>
+                        <div class="col l-4 m-12"
+                            style="display: flex; flex-direction: column; gap: 40px; justify-content: flex-start;">
+                            <div class="section-content__feature__item " style="max-width: 200px; margin-left: 0;">
+                                <div class="section-content__feature__item__up chip-text">Up to</div>
+                                <div class="section-content__feature__item__number chip-number">24 <span>GB</span></div>
+                                <div class="section-content__feature__item__desc chip-text">faster than M1 model</div>
+                            </div>
+                            <div class="section-content__feature__item " style="max-width: 200px;margin-left: 0;">
+                                <div class="section-content__feature__item__up chip-text"></div>
+                                <div class="section-content__feature__item__number chip-number">100 <span>GB</span>
+                                </div>
+                                <div class="section-content__feature__item__desc chip-text">memory bandwidth</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m2-chip-wrap margin-chip">
+                        <div class="col l-7">
+                            <div class="img-core"></div>
+                        </div>
+                        <div class="col l-5"
+                            style="display: flex; flex-direction: column; gap: 0px; justify-content: flex-start;">
+                            <div class="section-content__feature__item " style="max-width: 300px; margin: 0;  ">
+                                <div class="section-content__feature__item__number chip-number"><span>8-core CPU</span>
+                                </div>
+                            </div>
+                            <div class="section-content__feature__item " style="max-width: 300px; margin: 0; ">
+                                <div class="section-content__feature__item__number chip-number"><span>10-core GPU</span>
+                                </div>
+                            </div>
+                            <div class="section-content__feature__item " style="max-width: 300px; margin: 0; ">
+                                <div class="section-content__feature__item__number chip-number"><span>16-core Neural
+                                        Engines</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chip-category">CPU</div>
+                    <div class="performance-title">Let’s do this.</div>
+                    <p class="typography-section-copy-alt">The next-generation 8‑core CPU on M2 is up to 18 percent
+                        faster than M1. So you can zip through builds in Xcode or apply filters and effects to
+                        high‑resolution photos even faster — all without sacrificing battery life.</p>
+                    <div class="chip-category margin-chip-category">M2 CPU Performance vs. Power</div>
+                    <p class="typography-section-copy-alt">Compared to the latest 10‑core PC laptop chip, the CPU in M2
+                        delivers 1.9 times faster performance at the same power level. And M2 delivers the peak
+                        performance of the PC chip while using 75 percent less power.</p>
+                    <img src="./assets/img/m2_graph_cpu1__f63o6yayh9ui_large.jpg" alt="" class="image-graph-cpu1">
+                    <div class="graph-stats">
+                        <div class="section-content__feature__item " style="max-width: 200px;margin-left: 0;">
+                            <div class="section-content__feature__item__number chip-number">1.9 <span>X</span>
+                            </div>
+                            <div class="section-content__feature__item__desc chip-text">faster performance</div>
+                        </div>
+                        <div class="section-content__feature__item " style="max-width: 200px;margin-left: 0;">
+                            <div class="section-content__feature__item__up chip-text"></div>
+                            <div class="section-content__feature__item__number chip-number color-number">75%
+                            </div>
+                            <div class="section-content__feature__item__desc chip-text">less power consumption</div>
+                        </div>
+                    </div>
+                    <div class="chip-category">GPU</div>
+                    <div class="performance-title">Make it pretty. Fast.</div>
+                    <p class="typography-section-copy-alt">With the 10‑core GPU on M2, graphics are up to 35 percent
+                        faster than M1.3 This means shorter rendering times and supersmooth higher frame rates when
+                        you’re playing graphically intensive games.</p>
+                    <div class="chip-category margin-chip-category">M2 GPU Performance vs. Power</div>
+                    <p class="typography-section-copy-alt">Compared to the integrated graphics in the latest PC laptop
+                        chip, the GPU in M2 delivers 2.3 times faster performance at the same power level. And M2
+                        delivers the peak performance of the PC chip using 80 percent less power.5</p>
+                    <img src="./assets/img/m2_graph_gpu__2.jpg" alt="" class="image-graph-cpu1">
+                    <div class="graph-stats">
+                        <div class="section-content__feature__item " style="max-width: 200px;margin-left: 0;">
+                            <div class="section-content__feature__item__number chip-number">2.3 <span>X</span>
+                            </div>
+                            <div class="section-content__feature__item__desc chip-text">faster performance</div>
+                        </div>
+                        <div class="section-content__feature__item " style="max-width: 200px;margin-left: 0;">
+                            <div class="section-content__feature__item__up chip-text"></div>
+                            <div class="section-content__feature__item__number chip-number color-number">80%
+                            </div>
+                            <div class="section-content__feature__item__desc chip-text">less power consumption</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         new WOW().init();
     </script>
