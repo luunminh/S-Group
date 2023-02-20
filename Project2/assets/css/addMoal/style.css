@@ -13,8 +13,8 @@
 }
 .add-modal .form-add-wrap {
   margin: 0 auto;
-  min-width: 800px;
-  min-height: 600px;
+  width: 800px;
+  height: 600px;
   z-index: 200;
   border-radius: 20px;
   background-color: #FFF;
@@ -82,4 +82,11 @@
 }
 .add-modal .form-add-wrap .form-add .submit-btn:hover {
   background-color: #edebeb;
+}
+
+@media (max-width: 1023px) {
+  .form-add-wrap {
+    width: 100%;
+    gap: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */
