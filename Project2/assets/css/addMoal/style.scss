@@ -1,0 +1,109 @@
+.add-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+
+
+
+    .form-add-wrap {
+        margin: 0 auto;
+        min-width: 800px;
+        min-height: 600px;
+        z-index: 200;
+        border-radius: 20px;
+        background-color: #FFF;
+        padding: 50px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 90px;
+        position: relative;
+
+
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 18px;
+            border-radius: 999px;
+            font-weight: 700;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            color: #FFF;
+            background-color: #ccc;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #000;
+            letter-spacing: .3px;
+        }
+
+        .form-add {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 30px;
+
+
+
+            .input-tag {
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border-bottom: 1px solid #ccc;
+                border-radius: 5px;
+
+            }
+
+            .valid {
+                outline: 1px solid rgb(37, 206, 37);
+            }
+
+            .invalid {
+                outline: 1px solid red;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .submit-btn:hover {
+                background-color: #edebeb;
+            }
+        }
+    }
+
+
+
+
+
+
+}

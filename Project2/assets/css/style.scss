@@ -61,7 +61,7 @@ html {
 }
 
 .header {
-    padding-top: 37px;
+    // padding-top: 37px;
 
 }
 
@@ -75,9 +75,9 @@ html {
     font-weight: 400;
     color: var(--grey-color);
     padding-top: 5px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    // display: flex;
+    // align-items: center;
+    // gap: 5px;
 }
 
 .title-icon {
@@ -91,7 +91,7 @@ html {
     align-items: center;
     color: var(--grey-color);
     cursor: pointer;
-    padding: 2px 4px;
+    padding: 3px 6px;
     transition-property: all;
     transition-duration: .2s;
     border: 1px solid transparent;
@@ -108,7 +108,7 @@ html {
 
 // content 
 .content {
-    padding-top: 20px;
+    // padding-top: 20px;
 }
 
 .content-header {
