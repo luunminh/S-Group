@@ -119,6 +119,11 @@ html {
     align-items: center;
     justify-content: space-between;
     padding: 0 9px;
+    cursor: pointer;
+}
+
+.content-header:hover {
+    border: 1px solid #e7e7e7;
 }
 
 .content-header>span {
@@ -238,6 +243,7 @@ html {
         display: flex;
         align-items: center;
         padding-bottom: 55px;
+        margin-top: 5px;
 
         .time {
             font-size: 12px;
@@ -257,4 +263,8 @@ html {
 .content-item:hover {
     box-shadow: 3px 1px 18px 0px rgba(0, 0, 0, 0.12);
 
+}
+
+.invalid {
+    background-color: #9b9999;
 }
