@@ -269,3 +269,17 @@ html {
     background-color: #9b9999;
 }
 
+.loading {
+    font-size: 30px;
+    background: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

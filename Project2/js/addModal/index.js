@@ -1,5 +1,5 @@
 import $ from "../index.js";
-import { apiUrl, addNewItem } from "../index.js";
+import { addNewItem, editItem } from "../index.js";
 export function handleCheckValidInput(e) {
     // console.log(e.target.value);
 
@@ -54,10 +54,33 @@ export function handleAddToDo(e) {
             status: "todo",
             // time: times
         }
-        console.log({ item });
+        // console.log({ item });
         addNewItem(item);
     }
 
+}
+
+export function handleEditToDo(e) {
+    e.preventDefault();
+
+
+    let isValid = true;
+    const editForm = $(".form-edit")
+    const inputs = editForm.querySelectorAll(".input-tag")
+    for (const input of inputs) {
+        if (!isValidInput(input)) {
+            isValid = false
+        }
+    }
+
+    if (isValid) {
+        let status = editForm.querySelector("input[name=status]:checked").value;
+        // console.log(status);
+        let category = inputs[0].value
+        let title = inputs[1].value
+        let content = inputs[2].value
+        editItem({ category, title, content, status })
+    }
 }
 
 

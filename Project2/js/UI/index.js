@@ -1,7 +1,18 @@
-import $, { deleteItem } from '../index.js'
-// UI event handle and function renderUI 
+import $, { deleteItem, renderDataEditForm } from '../index.js'
 import { cleanInput } from '../addModal/index.js';
+// UI event handle and function renderUI 
 
+
+
+// loading
+
+export function showLoading() {
+    $('.loading').style.display = 'flex'
+}
+
+export function hideLoading() {
+    $('.loading').style.display = 'none'
+}
 
 // render items UI 
 export function showItems(items) {
@@ -88,16 +99,21 @@ export function filteredItems(data) {
 }
 
 
-// check add form modal status
-let isOnForm = false;
+//modal turn on and off
 
 export function handleClickModal() {
     document.querySelector(".add-modal").style.display = 'flex';
 }
 
-export function handleClickEditModal() {
+export function handleClickEditModal(e) {
+    // console.log();
     document.querySelector(".edit-modal").style.display = 'flex';
+    renderDataEditForm((e.target.parentElement).parentElement.id)
 }
+
+
+
+
 
 function handleTurnOffModal() {
     const element = document.querySelector(".form-add-wrap");
@@ -199,7 +215,6 @@ function handleTabFinishedList() {
 
 
     // edit modal
-    // editBtn.addEventListener("click", handleClickEditModal);
 
     const editModal = document.querySelector(".edit-modal");
     editModal.addEventListener("click", handleTurnOffEditModal);

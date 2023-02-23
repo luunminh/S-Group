@@ -139,6 +139,10 @@
 .edit-modal .form-edit-wrap .form-edit .submit-btn:hover {
   background-color: #edebeb;
 }
+.add-modal .form-edit-wrap,
+.edit-modal .form-edit-wrap {
+  height: 650px;
+}
 
 @media (max-width: 1023px) {
   .form-add-wrap,
