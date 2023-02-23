@@ -1,0 +1,149 @@
+.add-modal,
+.edit-modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.add-modal .form-add-wrap,
+.add-modal .form-edit-wrap,
+.edit-modal .form-add-wrap,
+.edit-modal .form-edit-wrap {
+  margin: 0 auto;
+  width: 800px;
+  height: 600px;
+  z-index: 200;
+  border-radius: 20px;
+  background-color: #FFF;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 90px;
+  position: relative;
+}
+.add-modal .form-add-wrap .close-modal,
+.add-modal .form-edit-wrap .close-modal,
+.edit-modal .form-add-wrap .close-modal,
+.edit-modal .form-edit-wrap .close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.add-modal .form-add-wrap .close-modal:hover,
+.add-modal .form-edit-wrap .close-modal:hover,
+.edit-modal .form-add-wrap .close-modal:hover,
+.edit-modal .form-edit-wrap .close-modal:hover {
+  color: #FFF;
+  background-color: #ccc;
+}
+.add-modal .form-add-wrap h2,
+.add-modal .form-edit-wrap h2,
+.edit-modal .form-add-wrap h2,
+.edit-modal .form-edit-wrap h2 {
+  font-size: 32px;
+  color: #000;
+  letter-spacing: 0.3px;
+}
+.add-modal .form-add-wrap .form-add,
+.add-modal .form-add-wrap .form-edit,
+.add-modal .form-edit-wrap .form-add,
+.add-modal .form-edit-wrap .form-edit,
+.edit-modal .form-add-wrap .form-add,
+.edit-modal .form-add-wrap .form-edit,
+.edit-modal .form-edit-wrap .form-add,
+.edit-modal .form-edit-wrap .form-edit {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.add-modal .form-add-wrap .form-add .input-tag,
+.add-modal .form-add-wrap .form-edit .input-tag,
+.add-modal .form-edit-wrap .form-add .input-tag,
+.add-modal .form-edit-wrap .form-edit .input-tag,
+.edit-modal .form-add-wrap .form-add .input-tag,
+.edit-modal .form-add-wrap .form-edit .input-tag,
+.edit-modal .form-edit-wrap .form-add .input-tag,
+.edit-modal .form-edit-wrap .form-edit .input-tag {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+.add-modal .form-add-wrap .form-add .valid-input,
+.add-modal .form-add-wrap .form-edit .valid-input,
+.add-modal .form-edit-wrap .form-add .valid-input,
+.add-modal .form-edit-wrap .form-edit .valid-input,
+.edit-modal .form-add-wrap .form-add .valid-input,
+.edit-modal .form-add-wrap .form-edit .valid-input,
+.edit-modal .form-edit-wrap .form-add .valid-input,
+.edit-modal .form-edit-wrap .form-edit .valid-input {
+  outline: 2px solid rgb(37, 206, 37);
+}
+.add-modal .form-add-wrap .form-add .invalid-input,
+.add-modal .form-add-wrap .form-edit .invalid-input,
+.add-modal .form-edit-wrap .form-add .invalid-input,
+.add-modal .form-edit-wrap .form-edit .invalid-input,
+.edit-modal .form-add-wrap .form-add .invalid-input,
+.edit-modal .form-add-wrap .form-edit .invalid-input,
+.edit-modal .form-edit-wrap .form-add .invalid-input,
+.edit-modal .form-edit-wrap .form-edit .invalid-input {
+  outline: 2px solid red;
+}
+.add-modal .form-add-wrap .form-add .submit-btn,
+.add-modal .form-add-wrap .form-edit .submit-btn,
+.add-modal .form-edit-wrap .form-add .submit-btn,
+.add-modal .form-edit-wrap .form-edit .submit-btn,
+.edit-modal .form-add-wrap .form-add .submit-btn,
+.edit-modal .form-add-wrap .form-edit .submit-btn,
+.edit-modal .form-edit-wrap .form-add .submit-btn,
+.edit-modal .form-edit-wrap .form-edit .submit-btn {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.add-modal .form-add-wrap .form-add .submit-btn:hover,
+.add-modal .form-add-wrap .form-edit .submit-btn:hover,
+.add-modal .form-edit-wrap .form-add .submit-btn:hover,
+.add-modal .form-edit-wrap .form-edit .submit-btn:hover,
+.edit-modal .form-add-wrap .form-add .submit-btn:hover,
+.edit-modal .form-add-wrap .form-edit .submit-btn:hover,
+.edit-modal .form-edit-wrap .form-add .submit-btn:hover,
+.edit-modal .form-edit-wrap .form-edit .submit-btn:hover {
+  background-color: #edebeb;
+}
+
+@media (max-width: 1023px) {
+  .form-add-wrap,
+  .form-edit-wrap {
+    width: 100%;
+    gap: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */
