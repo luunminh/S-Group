@@ -1,5 +1,6 @@
 import { handleCloseFormAdd, handleRenderItems, handleClickEditModal, handleCloseFormEdit, showLoading, hideLoading } from "./UI/index.js";
 import { handleAddToDo, handleEditToDo } from "./addModal/index.js"
+import { handleDragEvent } from "./Drag/index.js";
 // function dung` chung
 
 
@@ -48,6 +49,12 @@ export function renderDataEditForm(id) {
 
 // CRUD
 
+
+// search 
+export function getElmById(id) {
+    return globalData.find(elm => elm.id === id)
+}
+
 //add
 export const addNewItem = (item) => {
     axios
@@ -65,8 +72,8 @@ export const addNewItem = (item) => {
                 handleRenderItems(globalData)
                 addEventDelete()
                 addEventEdit();
-
                 handleCloseFormAdd();
+                handleDragEvent();
                 return;
             }
         });
@@ -76,9 +83,12 @@ export const addNewItem = (item) => {
 
 
 // edit
-export function editItem({ category, content, title, status }) {
-    const id = $(".form-edit").id
-    console.log("id", id);
+export function editItem(category, content, title, status, id) {
+    // console.log("id,", id);
+    if (!id) {
+        id = $(".form-edit").id
+    }
+    // console.log("id", id);
     const item = globalData.find(elm => elm.id === id);
     axios
         .put(
@@ -107,14 +117,17 @@ export function editItem({ category, content, title, status }) {
                 handleRenderItems(globalData)
                 addEventDelete()
                 addEventEdit();
-
                 handleCloseFormEdit()
+                handleDragEvent();
+                return true;
             }
         })
         .catch(error => {
             alert("error")
+            return false;
         });
 }
+
 
 // delete 
 export function deleteItem(e) {
@@ -129,7 +142,7 @@ export function deleteItem(e) {
                 handleRenderItems(globalData)
                 addEventDelete()
                 addEventEdit();
-
+                handleDragEvent();
             }
         })
 }
@@ -171,6 +184,7 @@ function addEventEdit() {
 
     addEventDelete();
     addEventEdit();
+    handleDragEvent();
 
 })()
 

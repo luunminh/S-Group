@@ -21,7 +21,7 @@
   height: 600px;
   z-index: 200;
   border-radius: 20px;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 50px;
   text-align: center;
   display: flex;
@@ -51,7 +51,7 @@
 .add-modal .form-edit-wrap .close-modal:hover,
 .edit-modal .form-add-wrap .close-modal:hover,
 .edit-modal .form-edit-wrap .close-modal:hover {
-  color: #FFF;
+  color: #fff;
   background-color: #ccc;
 }
 .add-modal .form-add-wrap h2,

@@ -42,6 +42,7 @@ export function showItems(items) {
 export function renderItems(item) {
     const li = document.createElement('li');
     li.className = 'content-item';
+    li.setAttribute("draggable", true)
     // li.id = `${item.id}`;
     let date;
     if (item.hasOwnProperty('isNewItem')) {

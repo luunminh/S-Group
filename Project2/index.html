@@ -25,19 +25,20 @@
     <script type="module" type=text/javascript src="./js/UI/index.js" defer></script>
     <script type="module" type=text/javascript src="./js/addModal/index.js" defer></script>
     <script type="module" type=text/javascript src="./js/index.js" defer></script>
+    <script type="module" type=text/javascript src="./js/Drag/index.js" defer></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch -->
 
 </head>
 
-<body>
+<body class="bg-bg">
     <div class="loading">
         <h2>
             Loading...
         </h2>
     </div>
-    <div class=" bg-bg overflow-hidden">
-        <div class="container flex flex-col gap-[20px] justify-start overflow-hidden">
+    <div class=" bg-bg overflow-hidden ">
+        <div class="container  flex flex-col gap-[20px] justify-start overflow-hidden">
             <div class="header mx-[-15px] sm:h-2/4 md:h-4/6 pt-[17px]">
                 <div class="col-lg-12 flex justify-between items-end">
                     <div class="">
@@ -62,7 +63,7 @@
                             <div class="total total-todo-status">3</div>
                         </div>
                         <div class="content-line todo-status"></div>
-                        <ul class="content-list todo-wrap">
+                        <ul class="content-list  todo-wrap">
 
                         </ul>
                     </div>
@@ -72,7 +73,7 @@
                             <div class="total total-doing-status">3</div>
                         </div>
                         <div class="content-line doing-status"></div>
-                        <ul class="content-list doing-wrap">
+                        <ul class="content-list  doing-wrap">
                         </ul>
                     </div>
                     <div class="col-lg-4 ">
@@ -81,7 +82,7 @@
                             <div class="total total-finished-status">3</div>
                         </div>
                         <div class="content-line finished-status"></div>
-                        <ul class="content-list finished-wrap">
+                        <ul class="content-list  finished-wrap">
                         </ul>
                     </div>
                 </div>
@@ -112,7 +113,7 @@
                     cols="50"></textarea>
                 <div class="radio-wrap flex justify-around gap-8 w-full">
                     <div class="flex items-center gap-4 justify-center">
-                        <input class="m-0 radio-btn" style="margin-top: 0;" type="radio" name="status" value="Todo">
+                        <input class="m-0 radio-btn" style="margin-top: 0;" type="radio" name="status" value="todo">
                         <label for="">To do</label>
                     </div>
                     <div class="flex items-center gap-4 justify-center">
