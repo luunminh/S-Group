@@ -79,7 +79,7 @@ export function handleEditToDo(e) {
         let category = inputs[0].value
         let title = inputs[1].value
         let content = inputs[2].value
-        editItem({ category, title, content, status })
+        editItem(category, title, content, status)
     }
 }
 
