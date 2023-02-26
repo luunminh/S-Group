@@ -526,10 +526,117 @@
         margin-bottom: 25px;
         margin-top: 70px;
     }
+
+    .m2-chip-wrap {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .img-power {
+        width: 348px;
+        height: 413px;
+        background-size: 348px 413px;
+        background-repeat: no-repeat;
+        background-image: url("../img/m2_power__ez08wn3y6qoi_medium.jpg");
+    }
+
+    .power-modal-right-side {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 70px;
+    }
+    .chip-number {
+        font-size: 48px;
+    }
+    .chip-number > span {
+        font-size: 32px;
+    }
+
+    .img-core {
+        width: 348px;
+        height: 315px;
+        background-size: 348px 315px;
+        background-repeat: no-repeat;
+        background-image: url("../img/m2_memory__da0smqtqicae_medium.jpg");
+    }
+
+    .chip-category {
+        font-size: 21px;
+    }
+    .performance-title {
+        font-size: 32px;
+    }
+    .typography-section-copy-alt {
+        font-size: 21px;
+        line-height: 1.19048;
+        font-weight: 600;
+        letter-spacing: 0.011em;
+    }
+
+    .image-graph-cpu1 {
+        width: 562px;
+        height: 321px;
+        background-size: 562px 321px;
+    }
 }
 
 /* mobile */
 @media (max-width: 739px) {
+    .m2-chip-wrap {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .chip-number {
+        font-size: 48px;
+    }
+    .chip-number > span {
+        font-size: 28px;
+    }
+    .power-modal-right-side {
+        gap: 0;
+    }
+    .img-power {
+        width: 274px;
+        height: 326px;
+        background-size: 274px 326px;
+        background-repeat: no-repeat;
+    }
+    .img-core {
+        width: 274px;
+        height: 248px;
+        background-size: 274px 248px;
+        background-repeat: no-repeat;
+    }
+
+    .chip-category {
+        font-size: 21px;
+    }
+    .performance-title {
+        font-size: 28px;
+        line-height: 1.14286;
+        font-weight: 600;
+        letter-spacing: 0.007em;
+    }
+    .typography-section-copy-alt {
+        font-size: 17px;
+        line-height: 1.23536;
+        font-weight: 500;
+        letter-spacing: -0.022em;
+    }
+
+    .image-graph-cpu1 {
+        width: 283px;
+        height: 209px;
+        background-size: 283px 209px;
+        background-repeat: no-repeat;
+    }
+    .graph-stats {
+        gap: 40px;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+    .section-content__feature__item {
+        margin-right: 0;
+    }
     .grid.wide.wide-content {
         max-width: 340px;
     }
