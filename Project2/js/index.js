@@ -83,7 +83,7 @@ export const addNewItem = (item) => {
 
 
 // edit
-export function editItem(category, content, title, status, id) {
+export function editItem(category, title, content, status, id) {
     // console.log("id,", id);
     if (!id) {
         id = $(".form-edit").id

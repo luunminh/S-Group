@@ -35,7 +35,7 @@ export function handleDragEvent() {
             const id = draggable.querySelector(".content-btn").id
             const { category, time, content, title } = getElmById(id);
             // console.log({ category, content, title, status, id });
-            if (editItem(category, content, title, status, id)) {
+            if (editItem(category, title, content, status, id)) {
                 console.log("edit successful");
             }
         })
